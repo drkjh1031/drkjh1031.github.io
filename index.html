@@ -286,7 +286,7 @@ li strong { color: var(--ink); }
         <div class="stat">
           <div class="stat-label" data-en>Publications</div>
           <div class="stat-label" data-ko>논문</div>
-          <div class="stat-value">2 (1 under review)</div>
+          <div class="stat-value">2<span style="font-size: 0.7em; display: block; margin-top: 4px; color: var(--ink-faint); font-weight: normal;">(1 under review)</span></div>
         </div>
         <div class="stat">
           <div class="stat-label" data-en>Awards</div>
@@ -400,8 +400,7 @@ li strong { color: var(--ink); }
           <ul>
             <li><strong data-en>Korean</strong><strong data-ko>한국어</strong> — native</li>
             <li><strong data-en>English</strong><strong data-ko>영어</strong> — TOEIC Speaking IM3 (2026)</li>
-            <li><strong data-en>German</strong><strong data-ko>독일어</strong> — 회화 가능</li>
-            <li><strong data-en>German sign Language(DGS)</strong><strong data-ko>독일 수어(DGS)</strong> — 기초</li>
+            <li><strong data-en>German</strong><strong data-ko>독일어</strong> — conversational</li>
           </ul>
         </div>
         <div class="card">
@@ -425,24 +424,19 @@ li strong { color: var(--ink); }
       <h2 data-ko>프로젝트 · 연구</h2>
 
       <!-- PROJECT 1 -->
-      <h3 data-en>Korean Society for Precision Engineering Creativity Competition and Precision Engineering Laboratory</h3>
-      <h3 data-ko>정밀공학회 창의경진대회 및 정밀공학실험실</h3>
+      <h3 data-en>Micro-EDM Feed Control with AI</h3>
+      <h3 data-ko>인공지능 미세방전가공 이송 제어</h3>
       <table class="project-table">
         <tr>
-          <th data-en>Duration</th><td>2025.03 – 2026.03</td>
+          <th data-en>Duration</th><td>2025.11 – 2026.03</td>
         </tr>
         <tr>
-          <th data-en>Tools</th><td><strong>Python, PyTorch, MATLAB, NumPy, Pandas</strong></td>
+          <th data-en>Tools</th><td><strong>Python, PyTorch, MATLAB, LabVIEW, NumPy, Pandas</strong></td>
         </tr>
         <tr>
           <th data-en>Goal</th>
-          <td data-en>AI-based feed control for micro-EDM: replacing fixed voltage thresholds with intelligent signal classification to reduce machining time and prevent tool breakage.</td>
-          <td data-ko>인공지능 미세방전가공 이송 제어, 고정 전압 임계값을 지능형 신호 분류로 대체하여 가공 시간 단축 및 공구 파손 방지</td>
-        </tr>
-        <tr>
-          <th data-en>My Role</th>
-          <td data-en>Signal analysis (MATLAB PCA), ML model development (Python: CNN-TCN, Bi-LSTM, QCL), LabVIEW real-time control integration</td>
-          <td data-ko>신호 분석 (MATLAB PCA), ML 모델 개발 (Python: CNN-TCN, Bi-LSTM, QCL), LabVIEW 실시간 제어 통합</td>
+          <td data-en>Replace fixed voltage thresholds with intelligent signal classification to reduce machining time and prevent tool breakage</td>
+          <td data-ko>고정 전압 임계값을 지능형 신호 분류로 대체하여 가공 시간 단축 및 공구 파손 방지</td>
         </tr>
         <tr>
           <th data-en>Results</th><td>
@@ -452,13 +446,13 @@ li strong { color: var(--ink); }
           </td>
         </tr>
         <tr>
-          <th data-en>Publication</th><td>Oh, C.B., Kim, J.H., Kim, B.H. "Development and Experimental Validation of a Risk-Aware Intelligent Adaptive Feed Control System for Micro-EDM." <em>International Journal of Precision Engineering and Manufacturing</em> (under review)</td>
+          <th data-en>Publication</th><td>Oh, C.B., Kim, J.H., Kim, B.H. (2024+). "Development and Experimental Validation of a Risk-Aware Intelligent Adaptive Feed Control System for Micro-EDM." <em>International Journal of Precision Engineering and Manufacturing</em> (under review)</td>
         </tr>
       </table>
 
       <!-- PROJECT 2 -->
-      <h3 data-en>Renewable Energy Application Laboratory</h3>
-      <h3 data-ko>신재생에너지응용실험실</h3>
+      <h3 data-en>Foldable PEM Fuel Cells</h3>
+      <h3 data-ko>접이식 연료전지</h3>
       <table class="project-table">
         <tr>
           <th data-en>Duration</th><td>2022.11 – 2023.03</td>
@@ -472,11 +466,6 @@ li strong { color: var(--ink); }
           <td data-ko>반복 접힘에서도 성능을 유지하는 웨어러블용 유연 연료전지 설계</td>
         </tr>
         <tr>
-          <th data-en>My Role</th>
-          <td data-en>Housing and flow channel design (Inventor), mechanical tolerance validation, electrical performance testing</td>
-          <td data-ko>케이싱 및 유로 채널 설계 (Inventor), 기계적 변형 허용도 검증, 전기 성능 테스트</td>
-        </tr>
-        <tr>
           <th data-en>Results</th><td>
             • <strong>500+ fold cycles</strong> with maintained power output<br>
             • Validated lightweight design without sacrificing stiffness
@@ -488,8 +477,8 @@ li strong { color: var(--ink); }
       </table>
 
       <!-- PROJECT 3 -->
-      <h3 data-en>Collegiate Game Development club, BRIDGE</h3>
-      <h3 data-ko>대학생 연합 게임 제작 동아리, BRIDGE</h3>
+      <h3 data-en>Game Development - Data Externalization</h3>
+      <h3 data-ko>게임 개발 - 데이터 외부화</h3>
       <table class="project-table">
         <tr>
           <th data-en>Duration</th><td>2021.03 – 2022.11</td>
@@ -503,27 +492,17 @@ li strong { color: var(--ink); }
           <td data-ko>게임 데이터를 코드에서 공유 스프레드시트로 이동하여 기획자의 독립적 작업 구현</td>
         </tr>
         <tr>
-          <th data-en>My Role</th>
-          <td data-en>Data architecture redesign, C# serialization layer implementation, Google Sheets API integration, game UI & auxiliary features (Unity)</td>
-          <td data-ko>데이터 아키텍처 재설계, C# 시리얼화 계층 구현, Google Sheets API 통합, 게임 UI 및 보조 기능 (Unity)</td>
-        </tr>
-        <tr>
           <th data-en>Results</th><td>
             • <strong>~90% reduction</strong> in programmer context-switches<br>
             • <strong>0-day lead time</strong> for content updates<br>
-            • Project shipped November 2022 (after 2 years despite scope creep)
+            • Project shipped November 2022
           </td>
-        </tr>
-        <tr>
-          <th data-en>Team</th>
-          <td data-en>BRIDGE (Inter-University Game Development Club), 9th cohort programmer | Team: "JuJak Games"</td>
-          <td data-ko>대학생 연합 게임 제작 동아리 BRIDGE, 9기 프로그래머 | 팀: "주작 게임즈"</td>
         </tr>
       </table>
 
       <!-- PROJECT 4 -->
-      <h3 data-en>Major Project – Structural Design and Modal Analysis for Resonant Frequency Optimization in High-Speed ​​Spindles</h3>
-      <h3 data-ko>전공 프로젝트 - 고속 스핀들에서 공진주파수 최적화를 위한 구조 설계 및 모달 해석</h3>
+      <h3 data-en>Spindle Fixture - CAM & Modal Analysis</h3>
+      <h3 data-ko>스핀들 클램프 - 전산응용가공 및 모달해석</h3>
       <table class="project-table">
         <tr>
           <th data-en>Duration</th><td>2025-2 Semester (coursework)</td>
@@ -537,21 +516,11 @@ li strong { color: var(--ink); }
           <td data-ko>공진 주파수 감소 및 강체모드 제거로 정밀 가공용 스핀들 클램프 설계</td>
         </tr>
         <tr>
-          <th data-en>My Role</th>
-          <td data-en>CAD design (Inventor 3D assembly: spindle, clamp, supports, rollers), FEA modal analysis, soft spring optimization, stress validation</td>
-          <td data-ko>CAD 설계 (Inventor 3D 어셈블리: 스핀들, 클램프, 지지대, 롤러), FEA 모달해석, 소프트 스프링 최적화, 응력 검증</td>
-        </tr>
-        <tr>
           <th data-en>Results</th><td>
             • <strong>3 rigid modes eliminated</strong><br>
             • <strong>1st mode shifted 40%</strong><br>
             • Soft spring decoupling confirmed through FEA
           </td>
-        </tr>
-        <tr>
-          <th data-en>Deliverables</th>
-          <td data-en>3D assembly (Inventor .iam), stress analysis report (HTML), soft spring STEP model, 3D animation</td>
-          <td data-ko>3D 조립 모델 (Inventor .iam), 응력 해석 보고서 (HTML), 소프트 스프링 모델, 3D 애니메이션</td>
         </tr>
       </table>
     </div>
@@ -579,14 +548,14 @@ li strong { color: var(--ink); }
           <h3 data-en>Research</h3>
           <h3 data-ko>연구</h3>
           <ul>
-            <li><strong data-en>Precision Engineering Lab</strong><strong data-ko>정밀공학 실험실</strong> (2025.11 – 2026.03)<br><span style="color: var(--ink-soft); font-size: 0.9rem;" data-en>Micro-EDM feed control, deep learning models</span><span style="color: var(--ink-soft); font-size: 0.9rem;" data-ko>미세방전 이송 제어, 딥러닝 모델</span></li>
-            <li style="margin-top: 8px;"><strong data-en>Renewable Energy Lab</strong><strong data-ko>신재생에너지 실험실</strong> (2022.11 – 2023.03)<br><span style="color: var(--ink-soft); font-size: 0.9rem;" data-en>Foldable fuel cell design, Inventor CAD</span><span style="color: var(--ink-soft); font-size: 0.9rem;" data-ko>접이식 연료전지 설계, Inventor CAD</span></li>
+            <li><strong data-en>Precision Engineering Lab</strong><strong data-ko>정밀공학 실험실</strong> (2025.11 – 2026.03)</li>
+            <li style="margin-top: 8px;"><strong data-en>Renewable Energy Lab</strong><strong data-ko>신재생에너지 실험실</strong> (2022.11 – 2023.03)</li>
           </ul>
         </div>
 
         <div class="card" style="grid-column: 1/-1;">
-          <h3 data-en>Activities & Leadership — Detailed</h3>
-          <h3 data-ko>활동 · 리더십 상세</h3>
+          <h3 data-en>Activities & Leadership</h3>
+          <h3 data-ko>활동 · 리더십</h3>
         </div>
 
         <div class="card">
@@ -594,12 +563,24 @@ li strong { color: var(--ink); }
           <h3 style="margin-top: 0;" data-ko>SSARA (자동차연구회)</h3>
           <div style="font-size: 0.9rem; color: var(--ink-faint); margin-bottom: 12px;">2022.02 – 2022.11 | Wiring Team Member</div>
           <ul style="font-size: 0.9rem;">
-            <li data-en><strong>Electrical Harness Design:</strong> Designed and mapped power distribution harness for student-built racing car integrating battery, motor controller, sensors, and safety circuits</li>
-            <li data-ko><strong>전기 배선 설계:</strong> 자작 자동차를 위한 배터리, 모터 컨트롤러, 센서, 안전 회로를 통합하는 전원 배선 설계 및 매핑</li>
-            <li data-en><strong>System Integration:</strong> Power wiring design and mapping integrating the battery, motor controller, sensors, and safety circuits for a custom-built vehicle.</li>
-            <li data-ko><strong>시스템 통합:</strong> 기계팀, 소프트웨어팀과 협력하여 전기 시스템이 차대와 모터 제어 로직과 호환되도록 보장</li>
-            <li data-en><strong>KASA Participation (2022):</strong> Contributed to collegiate automotive engineering competition entry</li>
-            <li data-ko><strong>KASA 참가 (2022):</strong> 대학생 창작자동차 경진대회에 참여</li>
+            <li data-en><strong>Electrical Harness Design:</strong> Designed power distribution harness integrating battery, motor controller, sensors, and safety circuits</li>
+            <li data-ko><strong>전기 배선 설계:</strong> 자작 자동차를 위한 배터리, 모터 컨트롤러, 센서, 안전 회로 통합</li>
+            <li data-en><strong>KASA Participation:</strong> Contributed to collegiate automotive engineering competition (2022)</li>
+            <li data-ko><strong>KASA 참가:</strong> 대학생 창작자동차 경진대회 참여</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3 style="margin-top: 0;" data-en>Central Kumdo Club, Sunggeokhoe</h3>
+          <h3 style="margin-top: 0;" data-ko>중앙검도동아리, 숭검회</h3>
+          <div style="font-size: 0.9rem; color: var(--ink-faint); margin-bottom: 12px;">2024.03 – 2026.02 | Regular Member</div>
+          <ul style="font-size: 0.9rem;">
+            <li data-en><strong>Martial Arts Training:</strong> Regular kumdo (sword martial art) practice 2–3 times per week</li>
+            <li data-ko><strong>무술 훈련:</strong> 주 2–3회 검도 정기 훈련 참여</li>
+            <li data-en><strong>Official Certification:</strong> Korean Martial Arts Association 4th Kyu (January 2024)</li>
+            <li data-ko><strong>정식 자격증:</strong> 대한검도회 4급 시험 합격 (2024년 1월)</li>
+            <li data-en><strong>Personal Growth:</strong> Developed mental discipline, physical resilience, and focus</li>
+            <li data-ko><strong>개인 성장:</strong> 정신적 규율, 신체적 회복력, 집중력 배양</li>
           </ul>
         </div>
 
@@ -608,42 +589,18 @@ li strong { color: var(--ink); }
           <h3 style="margin-top: 0;" data-ko>기계공학부 과학생회</h3>
           <div style="font-size: 0.9rem; color: var(--ink-faint); margin-bottom: 12px;">2022.03 – 2024.02 | Admin Officer</div>
           
-          <div style="margin-bottom: 18px;">
-            <strong data-en>33rd Council "SOL" (2022.03 – 2023.02)</strong>
-            <strong data-ko>33대 과학생회 "SOL" (2022.03 – 2023.02)</strong>
-                      <div style="margin-bottom: 18px;">
-            <strong data-en>34th Council "Moment" (2023.03 – 2024.02)</strong>
-            <strong data-ko>34대 과학생회 "Moment" (2023.03 – 2024.02)</strong>
-            <ul style="font-size: 0.9rem; margin-top: 8px;">
-              <li data-en><strong>Departmental Asset Management:</strong> Developed an inventory management program for over 50 types of rental items and consumables.</li>
-              <li data-ko><strong>부서 자산 관리:</strong> 약 50개 이상의 대여품, 소모품 인벤토리 관리 프로그램 제작</li>
-              <li data-en><strong>Schedule Management:</strong> Program for Managing and Creating Student Council Members' On-Duty Schedules</li>
-              <li data-ko><strong>일정 관리:</strong> 학생회 구성원 상주 시간표 관리 제작 프로그램 제작</li>
+          <strong data-en>33rd Council "SOL" (2022.03 – 2023.02)</strong>
+          <strong data-ko>33대 과학생회 "SOL" (2022.03 – 2023.02)</strong>
+          <ul style="font-size: 0.9rem; margin-top: 8px;">
+            <li data-en>Managed inventory of 50+ lab equipment and consumables</li>
+            <li data-ko>약 50개 이상의 실험실 기기, 소모품 인벤토리 관리</li>
           </ul>
-        </div>
 
-
-        <div class="card">
-          <h3 style="margin-top: 0;" data-en>Central Kumdo Club, Sunggeokhoe</h3>
-          <h3 style="margin-top: 0;" data-ko>중앙검도동아리, 숭검회</h3>
-          <div style="font-size: 0.9rem; color: var(--ink-faint); margin-bottom: 12px;">2024.03 – 2026.02 | Regular Member</div>
-          <ul style="font-size: 0.9rem;">
-            <li data-en><strong>Martial Arts Training:</strong> Participated in regular kumdo (sword martial art) practice sessions 2–3 times per week</li>
-            <li data-ko><strong>무술 훈련:</strong> 주 2–3회 검도 (검 무술) 정기 훈련 참여</li>
-            <li data-en><strong>Skill Development:</strong>
-              <ul style="margin: 6px 0 0 0; padding-left: 16px; font-size: 0.85rem;">
-                <li data-en>Footwork & positioning: advanced stances and balance under load</li>
-                <li data-ko>발수 및 위치: 고급 자세 및 부하 시 균형</li>
-                <li data-en>Strike technique: accurate sword strikes (attack and parry)</li>
-                <li data-ko>타격 기술: 정확한 검술 (공격 및 방어)</li>
-                <li data-en>Sparring & match strategy: competitive kumdo bout experience</li>
-                <li data-ko>대련 및 경기 전략: 경쟁 검도 경험</li>
-              </ul>
-            </li>
-            <li style="margin-top: 8px;" data-en><strong>Official Certification:</strong> Tested and passed Korean Martial Arts Association (KMA) 4th Kyu exam (January 2024) — demonstrates proficiency in fundamentals and intermediate techniques</li>
-            <li style="margin-top: 8px;" data-ko><strong>정식 자격증:</strong> 대한검도회 4급 시험 합격 (2024년 1월) — 기초 및 중급 기술 숙련도 입증</li>
-            <li data-en><strong>Personal Growth:</strong> Developed mental discipline, physical resilience, and focus through martial arts practice; cultivated respect for tradition and peer learning environment</li>
-            <li data-ko><strong>개인 성장:</strong> 무술 연습을 통한 정신적 규율, 신체적 회복력, 집중력 배양; 전통 존중 및 동료 학습 환경 조성</li>
+          <strong style="margin-top: 12px; display: block;" data-en>34th Council "Moment" (2023.03 – 2024.02)</strong>
+          <strong style="margin-top: 12px; display: block;" data-ko>34대 과학생회 "Moment" (2023.03 – 2024.02)</strong>
+          <ul style="font-size: 0.9rem; margin-top: 8px;">
+            <li data-en><strong>Asset Management System (Python):</strong> Digital inventory program with 70% overhead reduction</li>
+            <li data-ko><strong>자산 관리 시스템 (Python):</strong> 행정 부담 70% 감소한 디지털 인벤토리 프로그램</li>
           </ul>
         </div>
 
@@ -654,22 +611,12 @@ li strong { color: var(--ink); }
           <ul style="font-size: 0.9rem;">
             <li data-en><strong>Organization:</strong> Gwanakjump Social Cooperative — "Kkumdungshi" Community Children's Center</li>
             <li data-ko><strong>기관:</strong> 관악점프사회적협동조합 꿈둥지 지역아동센터</li>
-            <li data-en><strong>Target Population:</strong> Elementary and middle school students from low-income families; after-school support and mentoring</li>
-            <li data-ko><strong>대상:</strong> 저소득 가정 초·중학생; 방과 후 지원 및 멘토링</li>
-            <li data-en><strong>Tutoring Subjects:</strong>
-              <ul style="margin: 6px 0 0 0; padding-left: 16px; font-size: 0.85rem;">
-                <li data-en>Mathematics: problem-solving, arithmetic foundations, equation solving</li>
-                <li data-ko>수학: 문제 해결, 산술 기초, 방정식 풀이</li>
-                <li data-en>Science: concept explanation, experiment understanding, STEM basics</li>
-                <li data-ko>과학: 개념 설명, 실험 이해, STEM 기초</li>
-                <li data-en>Homework support: assignment clarification, subject-specific guidance</li>
-                <li data-ko>숙제 지원: 과제 명확화, 과목별 안내</li>
-              </ul>
-            </li>
-            <li style="margin-top: 8px;" data-en><strong>Approach:</strong> One-on-one and small group tutoring; patient, encouraging teaching style; adapted explanations to individual learning pace</li>
-            <li style="margin-top: 8px;" data-ko><strong>방식:</strong> 1:1 및 소규모 그룹 과외; 인내심 있고 격려적인 교수 스타일; 개인 학습 속도에 맞게 설명 조정</li>
-            <li data-en><strong>Impact:</strong> Provided consistent academic support to 8–10 students over 4 months; contributed to their foundational knowledge and confidence in academics</li>
-            <li data-ko><strong>영향:</strong> 4개월간 8–10명의 학생에게 일관된 학습 지원 제공; 기초 지식 및 학업 자신감에 기여</li>
+            <li data-en><strong>Target:</strong> Elementary & middle school students from low-income families</li>
+            <li data-ko><strong>대상:</strong> 저소득 가정 초·중학생</li>
+            <li data-en><strong>Tutoring:</strong> Mathematics, Science, Homework support (1:1 and small groups)</li>
+            <li data-ko><strong>튜토링:</strong> 수학, 과학, 숙제 지원 (1:1 및 소규모 그룹)</li>
+            <li data-en><strong>Impact:</strong> Supported 8–10 students over 4 months</li>
+            <li data-ko><strong>영향:</strong> 4개월간 8–10명 학생 지원</li>
           </ul>
         </div>
       </div>
