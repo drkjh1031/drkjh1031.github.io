@@ -3,491 +3,820 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Jinha Kim — Mechanical Engineer / Physical AI</title>
-<meta name="description" content="Mechanical engineer working at the boundary of precision machining and machine learning. Micro-EDM, Physical AI, fuel cells.">
+<title>Jinha Kim — Portfolio</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Sans+KR:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Sans+KR:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-:root{
-  --paper:#EDEFF2;
-  --paper-2:#E3E7EC;
-  --grid:#D2D8E0;
-  --ink:#12161D;
-  --ink-soft:#4E5765;
-  --ink-faint:#8A929E;
-  --arc:#1B3FCC;
-  --spark:#00A08A;
-  --rule:#C6CDD6;
-  --maxw:1080px;
+:root {
+  --paper: #FAFBFC;
+  --grid: #E5E9F0;
+  --ink: #0D1117;
+  --ink-soft: #57606A;
+  --ink-faint: #8C959F;
+  --blue: #0969DA;
+  --green: #1A7F37;
 }
 
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{
-  background:var(--paper);
-  color:var(--ink);
-  font-family:'IBM Plex Sans','IBM Plex Sans KR',system-ui,sans-serif;
-  font-size:16px;line-height:1.62;
-  -webkit-font-smoothing:antialiased;
-  background-image:
-    linear-gradient(var(--grid) 1px,transparent 1px),
-    linear-gradient(90deg,var(--grid) 1px,transparent 1px);
-  background-size:64px 64px;
-  background-position:-1px -1px;
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: 'IBM Plex Sans', 'IBM Plex Sans KR', sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
 }
-body::before{
-  content:"";position:fixed;inset:0;pointer-events:none;z-index:0;
-  background:radial-gradient(ellipse at 50% 0%,transparent 40%,var(--paper) 88%);
-}
-.wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px;position:relative;z-index:1}
+body.ko { font-family: 'IBM Plex Sans KR', sans-serif; }
 
-.eyebrow{
-  font-family:'IBM Plex Mono',monospace;
-  font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;
-  color:var(--ink-faint);font-weight:500;
-}
-h1,h2,h3{font-family:'Archivo','IBM Plex Sans KR',sans-serif;letter-spacing:-.025em;line-height:1.06}
+.wrap { max-width: 900px; margin: 0 auto; padding: 0 32px; }
 
-nav{
-  position:sticky;top:0;z-index:50;
-  backdrop-filter:blur(10px);
-  background:color-mix(in srgb,var(--paper) 86%,transparent);
-  border-bottom:1px solid var(--rule);
+/* NAVIGATION */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(250, 251, 252, 0.95);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--grid);
 }
-nav .wrap{display:flex;align-items:center;justify-content:space-between;height:58px;gap:16px}
-.navmark{font-family:'Archivo';font-weight:800;font-size:.95rem;letter-spacing:-.01em}
-.navlinks{display:flex;gap:22px;align-items:center}
-.navlinks a{
-  font-family:'IBM Plex Mono',monospace;font-size:.75rem;letter-spacing:.08em;
-  text-transform:uppercase;color:var(--ink-soft);text-decoration:none;
-  padding-bottom:2px;border-bottom:1px solid transparent;transition:.18s;
+nav .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 56px;
 }
-.navlinks a:hover,.navlinks a:focus-visible{color:var(--arc);border-bottom-color:var(--arc)}
-.langtoggle{
-  display:flex;border:1px solid var(--rule);border-radius:2px;overflow:hidden;
-  font-family:'IBM Plex Mono',monospace;font-size:.7rem;
+.nav-brand {
+  font-family: 'Archivo';
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
 }
-.langtoggle button{
-  background:none;border:0;padding:5px 9px;cursor:pointer;
-  color:var(--ink-soft);letter-spacing:.06em;transition:.16s;font:inherit;
+.nav-menu {
+  display: flex;
+  gap: 20px;
+  align-items: center;
 }
-.langtoggle button[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
-
-header.hero{padding:72px 0 56px;border-bottom:1px solid var(--rule)}
-.hero h1{font-size:clamp(2.6rem,7.4vw,5.1rem);font-weight:800;margin:14px 0 0}
-.hero h1 .dim{color:var(--ink-faint);font-weight:500}
-.herolede{max-width:36em;margin-top:22px;font-size:1.06rem;color:var(--ink-soft)}
-.herolede strong{color:var(--ink);font-weight:600}
-
-.scope{
-  margin-top:44px;border:1px solid var(--rule);
-  background:linear-gradient(180deg,#F5F7F9,#E9EDF1);
-  position:relative;overflow:hidden;
+.nav-menu button {
+  background: none;
+  border: 0;
+  font-family: 'IBM Plex Mono';
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  color: var(--ink-soft);
+  padding: 6px 0;
+  transition: color 0.2s;
 }
-.scope svg{display:block;width:100%;height:auto}
-.scopelabels{display:flex;flex-wrap:wrap;gap:0;border-top:1px solid var(--rule)}
-.scopelabels div{
-  flex:1 1 140px;padding:11px 14px;border-right:1px solid var(--rule);
-  font-family:'IBM Plex Mono',monospace;font-size:.7rem;color:var(--ink-faint);
-  letter-spacing:.05em;
+.nav-menu button:hover, .nav-menu button.active {
+  color: var(--blue);
 }
-.scopelabels div:last-child{border-right:0}
-.scopelabels b{display:block;color:var(--ink);font-size:1.15rem;font-weight:600;letter-spacing:-.02em;margin-top:3px}
-.trace{fill:none;stroke:var(--arc);stroke-width:1.1;stroke-linejoin:round;stroke-dasharray:26000;stroke-dashoffset:26000;
-       animation:draw 3.2s linear .3s forwards;}
-@keyframes draw{to{stroke-dashoffset:0}}
-.shortmark{opacity:0;animation:blip .5s ease 3.1s forwards}
-@keyframes blip{to{opacity:1}}
-
-section{padding:66px 0;border-bottom:1px solid var(--rule)}
-.sechead{display:flex;align-items:baseline;gap:16px;margin-bottom:34px;flex-wrap:wrap}
-.sechead h2{font-size:clamp(1.5rem,3.2vw,2.05rem);font-weight:700}
-
-.entry{
-  display:grid;grid-template-columns:132px 1fr;gap:28px;
-  padding:26px 0;border-top:1px solid var(--rule);
+.lang-toggle {
+  display: flex;
+  gap: 6px;
+  border: 1px solid var(--grid);
+  border-radius: 4px;
+  padding: 4px;
 }
-.entry:first-of-type{border-top:0;padding-top:0}
-.entry .meta{font-family:'IBM Plex Mono',monospace;font-size:.72rem;color:var(--ink-faint);letter-spacing:.05em;line-height:1.8}
-.entry .meta .tag{
-  display:inline-block;border:1px solid var(--arc);color:var(--arc);
-  padding:1px 6px;margin-bottom:8px;font-size:.64rem;letter-spacing:.1em;text-transform:uppercase;
+.lang-toggle button {
+  background: transparent;
+  border: 0;
+  font-family: 'IBM Plex Mono';
+  font-size: 11px;
+  cursor: pointer;
+  padding: 4px 8px;
+  color: var(--ink-soft);
 }
-.entry .meta .tag.rev{border-color:var(--ink-faint);color:var(--ink-faint)}
-.entry h3{font-size:1.16rem;font-weight:600;line-height:1.36;letter-spacing:-.015em}
-.entry p{margin-top:11px;color:var(--ink-soft);font-size:.94rem;max-width:52em}
-.venue{font-family:'IBM Plex Mono',monospace;font-size:.74rem;color:var(--arc);margin-top:9px;display:block;line-height:1.6}
-.authors{font-family:'IBM Plex Mono',monospace;font-size:.72rem;color:var(--ink-faint);margin-top:10px;display:block;line-height:1.7}
-.authors em{font-style:normal;color:var(--ink);font-weight:600;border-bottom:1.5px solid var(--arc)}
-
-.results{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1px;background:var(--rule);border:1px solid var(--rule);margin-top:18px}
-.results div{background:var(--paper-2);padding:14px 16px}
-.results span{font-family:'IBM Plex Mono',monospace;font-size:.66rem;color:var(--ink-faint);letter-spacing:.1em;text-transform:uppercase;display:block}
-.results b{font-family:'Archivo';font-size:1.5rem;font-weight:700;letter-spacing:-.03em;display:block;margin-top:2px}
-
-.skillgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:26px}
-.skillgrid h3{font-size:.8rem;font-family:'IBM Plex Mono',monospace;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:12px;padding-bottom:8px;border-bottom:1px solid var(--rule)}
-.skillgrid ul{list-style:none}
-.skillgrid li{padding:3px 0;font-size:.92rem;color:var(--ink-soft)}
-.skillgrid li b{color:var(--ink);font-weight:600}
-
-.tl{border-left:1px solid var(--rule);padding-left:26px;margin-left:6px}
-.tlitem{position:relative;padding-bottom:28px}
-.tlitem::before{
-  content:"";position:absolute;left:-31px;top:8px;width:9px;height:9px;
-  background:var(--paper);border:1.5px solid var(--arc);border-radius:50%;
+.lang-toggle button[aria-pressed="true"] {
+  background: var(--ink);
+  color: white;
 }
-.tlitem.minor::before{border-color:var(--ink-faint);width:7px;height:7px;left:-30px}
-.tlitem .when{font-family:'IBM Plex Mono',monospace;font-size:.72rem;color:var(--ink-faint);letter-spacing:.05em}
-.tlitem h3{font-size:1.02rem;font-weight:600;margin-top:3px}
-.tlitem.minor h3{font-size:.94rem;font-weight:500;color:var(--ink-soft)}
-.tlitem p{font-size:.9rem;color:var(--ink-soft);margin-top:5px;max-width:48em}
 
-footer{padding:60px 0 76px}
-.contactlinks{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
-.contactlinks a{
-  font-family:'IBM Plex Mono',monospace;font-size:.8rem;letter-spacing:.05em;
-  text-decoration:none;color:var(--ink);border:1px solid var(--ink);
-  padding:9px 16px;transition:.18s;
+.page { display: none; }
+.page.active { display: block; }
+
+[data-en] { display: none; }
+[data-ko] { display: none; }
+[data-de] { display: none; }
+.en [data-en] { display: revert; }
+.ko [data-ko] { display: revert; }
+.de [data-de] { display: revert; }
+
+/* TYPOGRAPHY */
+h1 { font-family: 'Archivo'; font-size: 2.8rem; font-weight: 800; line-height: 1.1; letter-spacing: -1px; margin: 16px 0; }
+h2 { font-family: 'Archivo'; font-size: 1.8rem; font-weight: 700; line-height: 1.2; margin: 24px 0 16px; }
+h3 { font-family: 'Archivo'; font-size: 1rem; font-weight: 600; margin: 12px 0 8px; }
+.eyebrow {
+  font-family: 'IBM Plex Mono';
+  font-size: 12px;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  margin-bottom: 12px;
+  display: block;
 }
-.contactlinks a:hover,.contactlinks a:focus-visible{background:var(--ink);color:var(--paper)}
-.colophon{margin-top:44px;font-family:'IBM Plex Mono',monospace;font-size:.68rem;color:var(--ink-faint);letter-spacing:.05em}
 
-[data-ko]{display:none}
-body.ko [data-en]{display:none}
-body.ko [data-ko]{display:revert}
-body.ko{font-family:'IBM Plex Sans KR','IBM Plex Sans',sans-serif}
+/* SECTIONS */
+section { padding: 60px 0; border-bottom: 1px solid var(--grid); }
+footer { padding: 60px 0; }
 
-:focus-visible{outline:2px solid var(--arc);outline-offset:3px}
-
-@media (max-width:720px){
-  body{background-size:44px 44px}
-  .entry{grid-template-columns:1fr;gap:12px}
-  .navlinks a:not(.keep){display:none}
-  header.hero{padding:48px 0 40px}
+/* HERO */
+.hero { padding: 80px 0 60px; }
+.hero h1 { margin-bottom: 12px; }
+.hero-intro {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--ink-soft);
+  max-width: 600px;
+  margin-bottom: 8px;
 }
-@media (prefers-reduced-motion:reduce){
-  *,*::before,*::after{animation:none!important;transition:none!important}
-  .trace{stroke-dashoffset:0}
-  .shortmark{opacity:1}
+.hero-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 16px;
+  margin-top: 32px;
+}
+.stat {
+  background: white;
+  border: 1px solid var(--grid);
+  padding: 16px;
+  border-radius: 6px;
+  text-align: center;
+}
+.stat-label {
+  font-family: 'IBM Plex Mono';
+  font-size: 11px;
+  color: var(--ink-faint);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 6px;
+}
+.stat-value {
+  font-family: 'Archivo';
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--blue);
+}
+
+/* PROJECT TABLE */
+.project-table {
+  width: 100%;
+  margin: 24px 0;
+  border-collapse: collapse;
+  border: 1px solid var(--grid);
+  background: white;
+}
+.project-table th {
+  background: var(--grid);
+  padding: 12px;
+  text-align: left;
+  font-weight: 600;
+  font-size: 14px;
+}
+.project-table td {
+  padding: 14px;
+  border-bottom: 1px solid var(--grid);
+}
+.project-table tr:last-child td { border-bottom: 0; }
+.project-table td:first-child {
+  font-weight: 600;
+  min-width: 120px;
+  color: var(--ink);
+}
+
+/* GRID LAYOUTS */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  margin: 24px 0;
+}
+.card {
+  background: white;
+  border: 1px solid var(--grid);
+  border-radius: 6px;
+  padding: 20px;
+}
+.card h3 { margin-top: 0; }
+.card p { color: var(--ink-soft); font-size: 0.95rem; line-height: 1.6; }
+
+/* LIST */
+ul { margin: 16px 0; padding-left: 20px; }
+li { margin: 8px 0; color: var(--ink-soft); }
+li strong { color: var(--ink); }
+
+/* CHART */
+.chart {
+  background: white;
+  border: 1px solid var(--grid);
+  border-radius: 6px;
+  padding: 24px;
+  margin: 24px 0;
+}
+.bar-row {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin: 16px 0;
+}
+.bar-label { min-width: 100px; font-size: 0.9rem; }
+.bar {
+  height: 24px;
+  background: var(--blue);
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  padding: 0 8px;
+  color: white;
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+/* PUBLICATION */
+.publication {
+  background: white;
+  border-left: 3px solid var(--blue);
+  padding: 16px;
+  margin: 16px 0;
+  border-radius: 3px;
+}
+.publication-title { font-weight: 600; margin-bottom: 6px; }
+.publication-journal {
+  font-family: 'IBM Plex Mono';
+  font-size: 12px;
+  color: var(--blue);
+  margin-bottom: 8px;
+}
+.publication-authors {
+  font-family: 'IBM Plex Mono';
+  font-size: 12px;
+  color: var(--ink-faint);
+}
+
+/* CONTACT */
+.contact-links {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+}
+.contact-links a {
+  display: inline-block;
+  padding: 10px 16px;
+  background: var(--blue);
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 14px;
+  transition: background 0.2s;
+}
+.contact-links a:hover { background: var(--green); }
+
+@media (max-width: 640px) {
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.4rem; }
+  .nav-menu button:not(.keep) { display: none; }
+  .hero-stats { grid-template-columns: 1fr 1fr; }
 }
 </style>
 </head>
-<body>
+<body class="en">
 
 <nav>
   <div class="wrap">
-    <span class="navmark">JINHA KIM</span>
-    <div class="navlinks">
-      <a href="#work" data-en>Work</a><a href="#work" data-ko>연구</a>
-      <a href="#skills" data-en>Skills</a><a href="#skills" data-ko>역량</a>
-      <a href="#path" data-en>Path</a><a href="#path" data-ko>이력</a>
-      <a href="#contact" class="keep" data-en>Contact</a><a href="#contact" class="keep" data-ko>연락</a>
+    <div class="nav-brand" data-en>JINHA KIM</div>
+    <div class="nav-brand" data-ko>김진하</div>
+    <div class="nav-brand" data-de>JINHA KIM</div>
+    <div class="nav-menu">
+      <button class="nav-btn active" data-page="home" data-en>Home</button>
+      <button class="nav-btn" data-page="projects" data-en>Projects</button>
+      <button class="nav-btn" data-page="experience" data-en>Experience</button>
+      <button class="nav-btn" data-page="contact" data-en>Contact</button>
+      
+      <button class="nav-btn active" data-page="home" data-ko>홈</button>
+      <button class="nav-btn" data-page="projects" data-ko>프로젝트</button>
+      <button class="nav-btn" data-page="experience" data-ko>경력</button>
+      <button class="nav-btn" data-page="contact" data-ko>연락</button>
+
+      <button class="nav-btn active" data-page="home" data-de>Start</button>
+      <button class="nav-btn" data-page="projects" data-de>Projekte</button>
+      <button class="nav-btn" data-page="experience" data-de>Erfahrung</button>
+      <button class="nav-btn" data-page="contact" data-de>Kontakt</button>
     </div>
-    <div class="langtoggle" role="group" aria-label="Language">
-      <button id="btn-en" aria-pressed="true">EN</button>
-      <button id="btn-ko" aria-pressed="false">KO</button>
+    <div class="lang-toggle">
+      <button id="en-btn" aria-pressed="true">EN</button>
+      <button id="ko-btn" aria-pressed="false">KO</button>
+      <button id="de-btn" aria-pressed="false">DE</button>
     </div>
   </div>
 </nav>
 
-<header class="hero">
-  <div class="wrap">
-    <p class="eyebrow" data-en>Mechanical Engineering · Seoul, KR</p>
-    <p class="eyebrow" data-ko>기계공학 · 대한민국 서울</p>
+<!-- HOME PAGE -->
+<div id="home" class="page active">
+  <section class="hero">
+    <div class="wrap">
+      <span class="eyebrow" data-en>Mechanical Engineer · Seoul, Korea</span>
+      <span class="eyebrow" data-ko>기계공학자 · 대한민국 서울</span>
+      <span class="eyebrow" data-de>Maschinenbauingenieurin · Seoul, Südkorea</span>
+      
+      <h1 data-en>Measure, analyze,<br>optimize.</h1>
+      <h1 data-ko>측정하고, 분석하고,<br>개선합니다.</h1>
+      <h1 data-de>Messen, analysieren,<br>optimieren.</h1>
 
-        <h1 data-en>Measure first.<br><span class="dim">Then improve it.</span></h1>
-    <h1 data-ko>측정하고,<br><span class="dim">개선합니다.</span></h1>
+      <p class="hero-intro" data-en>
+        Mechanical engineering graduate specializing in precision machining, AI-driven control systems, and process optimization. 
+        Published researcher with 2 SCI papers and award-winning innovation in micro-EDM automation.
+      </p>
+      <p class="hero-intro" data-ko>
+        정밀 가공, AI 기반 제어 시스템, 프로세스 최적화를 전문으로 하는 기계공학 졸업자.
+        SCI 논문 2편 발표, 미세방전가공 자동화 혁신으로 수상.
+      </p>
+      <p class="hero-intro" data-de>
+        Maschinenbauabsolventin mit Spezialisierung auf Präzisionsfertigung, KI-gesteuerte Steuerungssysteme und Prozessoptimierung.
+        Veröffentlichte Forscherin mit 2 SCI-Papieren und preisgekrönter Innovation in der Mikro-Funkenerosionsautomatisierung.
+      </p>
 
-    <p class="herolede" data-en>
-      I graduated from Soongsil University in the Department of Mechanical Engineering. 
-      In the university laboratory, I worked on the design of fuel cell housings and flow channels, 
-      as well as feed control for micro-EDM (Electrical Discharge Machining). For the latter, 
-      I conducted machining experiments and developed an AI model to replace fixed voltage thresholding. 
-      My research on fuel cells resulted in a published paper in 'Journal of Power Sources', while my work on micro-EDM 
-      feed control has been submitted to 'International Journal of Precision Engineering and Manufacturing' and is 
-      currently under review. I am seeking a position in process technology or quality control.
-    </p>
-    <p class="herolede" data-ko>
-      숭실대학교 기계공학부를 졸업했습니다. 교내 연구실에서 연료전지 하우징과 유로 채널 설계,
-      미세 방전가공 이송 제어를 다뤘습니다. 후자에서는 가공 실험을 수행하고 고정 전압 임계값을 대체할 인공지능 모델을 구축했습니다.
-      연료전지 연구는 'Journal of Power Sources'에 논문을 게재했고, 미세 방전가공 이송제어 연구는 'International Journal of 
-      Precision Engineering and Manufacturing'에 투고 후 심사 중입니다. 공정기술·품질관리 직무를 찾고 있습니다.
-    </p>
-
-    <div class="scope" aria-hidden="true">
-      <svg viewBox="0 0 1000 178" xmlns="http://www.w3.org/2000/svg">
-        <defs>
-          <pattern id="g" width="50" height="26" patternUnits="userSpaceOnUse">
-            <path d="M50 0 L0 0 0 26" fill="none" stroke="#D2D8E0" stroke-width=".7"/>
-          </pattern>
-        </defs>
-        <rect width="1000" height="178" fill="url(#g)"/>
-        <line x1="0" y1="91" x2="1000" y2="91" stroke="#8A929E" stroke-width=".7" stroke-dasharray="3 5"/>
-        <text x="6" y="87" font-family="IBM Plex Mono, monospace" font-size="9" fill="#8A929E">3.4 V</text>
-        <path class="trace tv" d="M0,163 L0,164 L2,163 L2,164 L3,164 L3,164 L5,115 L5,164 L6,163 L6,164 L8,84 L8,164 L9,157 L9,163 L11,163 L11,164 L12,162 L12,163 L14,162 L14,164 L15,162 L15,164 L17,163 L17,164 L18,163 L18,164 L20,163 L20,164 L21,163 L21,163 L23,164 L23,164 L24,163 L24,164 L26,164 L26,164 L27,164 L27,164 L29,148 L29,164 L30,162 L30,164 L32,163 L32,164 L33,108 L33,164 L35,162 L35,164 L36,162 L36,164 L38,162 L38,163 L39,156 L39,163 L41,163 L41,163 L42,160 L42,163 L44,160 L44,163 L45,158 L45,163 L47,162 L47,163 L48,156 L48,163 L50,164 L50,164 L51,164 L51,164 L53,68 L53,164 L54,164 L54,164 L56,163 L56,164 L57,162 L57,164 L59,163 L59,164 L60,164 L60,164 L62,163 L62,164 L63,157 L63,164 L65,164 L65,164 L66,162 L66,164 L68,163 L68,164 L69,161 L69,164 L71,163 L71,164 L72,119 L72,164 L74,163 L74,163 L75,162 L75,163 L77,122 L77,164 L78,164 L78,164 L80,164 L80,164 L81,164 L81,164 L83,164 L83,164 L84,164 L84,164 L86,164 L86,164 L87,164 L87,164 L89,164 L89,164 L90,164 L90,164 L92,163 L92,164 L93,164 L93,164 L95,164 L95,164 L96,163 L96,164 L98,63 L98,164 L99,164 L99,164 L101,163 L101,164 L102,161 L102,164 L104,164 L104,164 L105,126 L105,162 L107,135 L107,155 L108,90 L108,163 L110,163 L110,163 L111,45 L111,164 L113,163 L113,164 L114,164 L114,164 L116,59 L116,164 L117,164 L117,164 L119,162 L119,164 L120,164 L120,164 L122,164 L122,164 L123,159 L123,164 L125,102 L125,158 L126,163 L126,164 L128,164 L128,164 L129,86 L129,164 L131,163 L131,164 L132,164 L132,164 L134,164 L134,164 L135,163 L135,164 L137,42 L137,164 L138,163 L138,164 L140,71 L140,164 L141,164 L141,164 L143,163 L143,164 L144,162 L144,164 L146,164 L146,164 L147,164 L147,164 L149,164 L149,164 L150,164 L150,164 L152,150 L152,164 L153,163 L153,164 L155,163 L155,164 L156,164 L156,164 L158,164 L158,164 L159,163 L159,164 L161,161 L161,163 L162,77 L162,163 L164,156 L164,164 L165,163 L165,163 L167,162 L167,163 L168,148 L168,163 L170,93 L170,163 L171,45 L171,164 L173,163 L173,164 L174,163 L174,164 L176,164 L176,164 L177,164 L177,164 L179,164 L179,164 L180,163 L180,164 L182,150 L182,164 L183,164 L183,164 L185,163 L185,164 L186,164 L186,164 L188,159 L188,164 L189,163 L189,164 L191,163 L191,164 L192,135 L192,164 L194,163 L194,164 L195,164 L195,164 L197,163 L197,164 L198,163 L198,164 L200,164 L200,164 L201,164 L201,164 L203,164 L203,164 L204,110 L204,163 L206,158 L206,164 L207,164 L207,164 L209,163 L209,164 L210,126 L210,164 L212,98 L212,163 L213,163 L213,164 L215,163 L215,164 L216,163 L216,164 L218,164 L218,164 L219,164 L219,164 L221,164 L221,164 L222,164 L222,164 L224,164 L224,164 L225,164 L225,164 L227,164 L227,164 L228,112 L228,164 L230,164 L230,164 L231,164 L231,164 L233,164 L233,164 L234,149 L234,164 L236,132 L236,163 L237,89 L237,164 L239,160 L239,163 L240,101 L240,164 L242,161 L242,163 L243,122 L243,164 L245,70 L245,164 L246,86 L246,164 L248,163 L248,164 L249,91 L249,164 L251,164 L251,164 L252,164 L252,164 L254,106 L254,164 L255,114 L255,164 L257,161 L257,164 L258,164 L258,164 L260,22 L260,163 L261,164 L261,164 L263,164 L263,164 L264,95 L264,164 L266,62 L266,164 L267,163 L267,164 L269,146 L269,163 L270,139 L270,164 L272,162 L272,164 L273,64 L273,164 L275,164 L275,164 L276,163 L276,164 L278,164 L278,164 L279,164 L279,164 L281,164 L281,164 L282,163 L282,164 L284,164 L284,164 L285,164 L285,164 L287,161 L287,164 L288,164 L288,164 L290,97 L290,164 L291,59 L291,164 L293,163 L293,164 L294,164 L294,164 L296,164 L296,164 L297,160 L297,164 L299,52 L299,163 L300,156 L300,164 L302,160 L302,164 L303,164 L303,164 L305,163 L305,164 L306,164 L306,164 L308,163 L308,164 L309,163 L309,164 L311,152 L311,164 L312,164 L312,164 L314,164 L314,164 L315,65 L315,164 L317,159 L317,164 L318,164 L318,164 L320,164 L320,164 L321,163 L321,164 L323,164 L323,164 L324,164 L324,164 L326,163 L326,164 L327,163 L327,164 L329,164 L329,164 L330,131 L330,164 L332,164 L332,164 L333,100 L333,164 L335,55 L335,164 L336,162 L336,163 L338,163 L338,164 L339,162 L339,164 L341,163 L341,164 L342,162 L342,164 L344,164 L344,164 L345,164 L345,164 L347,164 L347,164 L348,163 L348,164 L350,164 L350,164 L351,163 L351,164 L353,163 L353,164 L354,164 L354,164 L356,164 L356,164 L357,144 L357,164 L359,161 L359,164 L360,163 L360,164 L362,158 L362,164 L363,163 L363,164 L365,160 L365,163 L366,62 L366,152 L368,70 L368,163 L369,159 L369,163 L371,57 L371,164 L372,164 L372,164 L374,104 L374,164 L375,164 L375,164 L377,163 L377,164 L378,163 L378,164 L380,164 L380,164 L381,164 L381,164 L383,162 L383,164 L384,163 L384,164 L386,164 L386,164 L387,164 L387,164 L389,62 L389,164 L390,164 L390,164 L392,164 L392,164 L393,122 L393,164 L395,163 L395,164 L396,163 L396,164 L398,128 L398,164 L399,46 L399,164 L401,118 L401,164 L402,164 L402,164 L404,22 L404,164 L405,164 L405,164 L407,164 L407,164 L408,164 L408,164 L410,162 L410,164 L411,163 L411,164 L413,164 L413,164 L414,164 L414,164 L416,164 L416,164 L417,164 L417,164 L419,164 L419,164 L420,164 L420,164 L422,164 L422,164 L423,164 L423,164 L425,164 L425,164 L426,164 L426,164 L428,164 L428,164 L429,164 L429,164 L431,141 L431,164 L432,164 L432,164 L434,164 L434,164 L435,164 L435,164 L437,164 L437,164 L438,164 L438,164 L440,164 L440,164 L441,164 L441,164 L443,164 L443,164 L444,164 L444,164 L446,164 L446,164 L447,164 L447,164 L449,164 L449,164 L450,164 L450,164 L452,164 L452,164 L453,163 L453,164 L455,163 L455,164 L456,147 L456,164 L458,164 L458,164 L459,160 L459,164 L461,164 L461,164 L462,164 L462,164 L464,143 L464,164 L465,56 L465,164 L467,164 L467,164 L468,164 L468,164 L470,164 L470,164 L471,162 L471,164 L473,147 L473,164 L474,164 L474,164 L476,164 L476,164 L477,163 L477,164 L479,164 L479,164 L480,163 L480,164 L482,164 L482,164 L483,164 L483,164 L485,164 L485,164 L486,116 L486,164 L488,116 L488,164 L489,164 L489,164 L491,164 L491,164 L492,164 L492,164 L494,164 L494,164 L495,152 L495,164 L497,143 L497,163 L498,163 L498,163 L500,159 L500,163 L501,23 L501,163 L503,164 L503,164 L504,66 L504,164 L506,162 L506,164 L507,164 L507,164 L509,162 L509,164 L510,163 L510,164 L512,163 L512,164 L513,162 L513,164 L515,162 L515,164 L516,164 L516,164 L518,164 L518,164 L519,164 L519,164 L521,87 L521,164 L522,163 L522,164 L524,164 L524,164 L525,161 L525,164 L527,164 L527,164 L528,157 L528,164 L530,164 L530,164 L531,164 L531,164 L533,148 L533,164 L534,164 L534,164 L536,164 L536,164 L537,164 L537,164 L539,101 L539,164 L540,128 L540,164 L542,23 L542,164 L543,148 L543,164 L545,164 L545,164 L546,164 L546,164 L548,163 L548,164 L549,164 L549,164 L551,40 L551,164 L552,21 L552,23 L554,21 L554,21 L555,20 L555,21 L557,19 L557,21 L558,20 L558,21 L560,20 L560,21 L561,19 L561,20 L563,19 L563,20 L564,19 L564,20 L566,20 L566,21 L567,20 L567,20 L569,20 L569,20 L570,19 L570,20 L572,19 L572,20 L573,19 L573,20 L575,19 L575,20 L576,19 L576,20 L578,20 L578,20 L579,20 L579,21 L581,20 L581,21 L582,20 L582,20 L584,19 L584,20 L585,19 L585,20 L587,19 L587,19 L588,19 L588,19 L590,19 L590,20 L591,19 L591,20 L593,19 L593,20 L594,19 L594,19 L596,18 L596,19 L597,19 L597,20 L599,20 L599,20 L600,20 L600,20 L602,20 L602,20 L603,19 L603,20 L605,19 L605,19 L606,19 L606,19 L608,20 L608,20 L609,20 L609,22 L611,22 L611,23 L612,21 L612,22 L614,20 L614,21 L615,19 L615,20 L617,19 L617,20 L618,19 L618,20 L620,19 L620,19 L621,19 L621,20 L623,20 L623,21 L624,20 L624,21 L626,19 L626,20 L627,19 L627,19 L629,19 L629,19 L630,19 L630,19 L632,19 L632,20 L633,20 L633,21 L635,20 L635,20 L636,19 L636,20 L638,19 L638,20 L639,19 L639,20 L641,19 L641,20 L642,19 L642,20 L644,21 L644,22 L645,21 L645,22 L647,20 L647,20 L648,19 L648,20 L650,19 L650,19 L651,19 L651,19 L653,19 L653,19 L654,19 L654,20 L656,20 L656,20 L657,19 L657,20 L659,19 L659,19 L660,19 L660,19 L662,19 L662,19 L663,19 L663,20 L665,20 L665,20 L666,20 L666,21 L668,19 L668,20 L669,19 L669,20 L671,19 L671,20 L672,19 L672,19 L674,20 L674,21 L675,20 L675,22 L677,22 L677,23 L678,21 L678,22 L680,20 L680,21 L681,19 L681,20 L683,19 L683,19 L684,20 L684,20 L686,19 L686,20 L687,20 L687,21 L689,22 L689,22 L690,20 L690,21 L692,19 L692,20 L693,19 L693,19 L695,19 L695,19 L696,19 L696,20 L698,20 L698,20 L699,21 L699,21 L701,20 L701,20 L702,19 L702,20 L704,20 L704,20 L705,21 L705,21 L707,21 L707,22 L708,21 L708,22 L710,21 L710,29 L711,21 L711,22 L713,20 L713,21 L714,19 L714,20 L716,19 L716,19 L717,19 L717,20 L719,19 L719,20 L720,19 L720,20 L722,19 L722,19 L723,19 L723,20 L725,19 L725,19 L726,19 L726,19 L728,19 L728,19 L729,19 L729,20 L731,19 L731,20 L732,20 L732,20 L734,20 L734,20 L735,19 L735,20 L737,19 L737,19 L738,19 L738,19 L740,20 L740,21 L741,22 L741,22 L743,21 L743,22 L744,20 L744,21 L746,19 L746,20 L747,19 L747,20 L749,19 L749,20 L750,19 L750,20 L752,20 L752,20 L753,21 L753,22 L755,21 L755,22 L756,19 L756,21 L758,19 L758,19 L759,19 L759,19 L761,19 L761,19 L762,20 L762,20 L764,20 L764,21 L765,20 L765,20 L767,19 L767,20 L768,19 L768,20 L770,18 L770,19 L771,19 L771,20 L773,20 L773,22 L774,22 L774,23 L776,22 L776,23 L777,22 L777,22 L779,20 L779,20 L780,20 L780,20 L782,19 L782,19 L783,19 L783,20 L785,20 L785,21 L786,20 L786,20 L788,19 L788,20 L789,19 L789,20 L791,19 L791,19 L792,19 L792,19 L794,19 L794,20 L795,20 L795,20 L797,20 L797,21 L798,20 L798,21 L800,19 L800,20 L801,19 L801,20 L803,18 L803,19 L804,18 L804,19 L806,21 L806,22 L807,22 L807,23 L809,21 L809,22 L810,21 L810,21 L812,20 L812,21 L813,19 L813,20 L815,19 L815,19 L816,19 L816,20 L818,20 L818,21 L819,22 L819,22 L821,20 L821,21 L822,19 L822,20 L824,20 L824,20 L825,19 L825,20 L827,19 L827,20 L828,20 L828,21 L830,21 L830,21 L831,20 L831,20 L833,19 L833,20 L834,19 L834,19 L836,18 L836,19 L837,20 L837,21 L839,21 L839,23 L840,22 L840,23 L842,22 L842,22 L843,20 L843,21 L845,20 L845,20 L846,19 L846,20 L848,19 L848,20 L849,21 L849,21 L851,20 L851,21 L852,19 L852,21 L854,19 L854,19 L855,19 L855,20 L857,19 L857,19 L858,19 L858,20 L860,19 L860,20 L861,21 L861,21 L863,21 L863,21 L864,20 L864,21 L866,19 L866,20 L867,19 L867,20 L869,19 L869,20 L870,19 L870,22 L872,21 L872,22 L873,21 L873,21 L875,21 L875,22 L876,20 L876,22 L878,20 L878,21 L879,20 L879,20 L881,19 L881,20 L882,19 L882,20 L884,20 L884,21 L885,20 L885,22 L887,19 L887,21 L888,19 L888,20 L890,20 L890,20 L891,20 L891,20 L893,20 L893,20 L894,21 L894,21 L896,20 L896,21 L897,19 L897,20 L899,19 L899,19 L900,18 L900,19 L902,19 L902,21 L903,21 L903,22 L905,22 L905,23 L906,22 L906,22 L908,20 L908,21 L909,20 L909,20 L911,19 L911,20 L912,19 L912,20 L914,20 L914,21 L915,20 L915,21 L917,21 L917,21 L918,20 L918,20 L920,19 L920,20 L921,19 L921,20 L923,19 L923,19 L924,20 L924,20 L926,20 L926,21 L927,21 L927,21 L929,20 L929,21 L930,20 L930,20 L932,19 L932,19 L933,19 L933,20 L935,20 L935,21 L936,22 L936,22 L938,21 L938,22 L939,21 L939,21 L941,21 L941,22 L942,20 L942,21 L944,20 L944,20 L945,19 L945,20 L947,19 L947,20 L948,20 L948,20 L950,21 L950,22 L951,20 L951,22 L953,19 L953,20 L954,19 L954,20 L956,20 L956,20 L957,20 L957,20 L959,20 L959,21 L960,20 L960,21 L962,19 L962,20 L963,20 L963,20 L965,19 L965,20 L966,19 L966,20 L968,20 L968,21 L969,22 L969,22 L971,22 L971,22 L972,21 L972,22 L974,20 L974,20 L975,19 L975,20 L977,19 L977,19 L978,19 L978,20 L980,20 L980,21 L981,21 L981,21 L983,20 L983,21 L984,20 L984,20 L986,19 L986,20 L987,19 L987,20 L989,20 L989,20 L990,20 L990,21 L992,21 L992,22 L993,21 L993,22 L995,20 L995,20 L996,19 L996,20 L998,19 L998,20 L999,19 L999,20"/>
-        <g class="shortmark">
-          <line x1="500" y1="0" x2="500" y2="178" stroke="#8A929E" stroke-width=".8" stroke-dasharray="4 4" opacity=".7"/>
-          <text x="14" y="171" font-family="IBM Plex Mono, monospace" font-size="10" fill="#1B3FCC">NORMAL DISCHARGE</text>
-          <text x="514" y="171" font-family="IBM Plex Mono, monospace" font-size="10" fill="#C0392B">RETRACT CLASS</text>
-          <text x="986" y="171" text-anchor="end" font-family="IBM Plex Mono, monospace" font-size="9" fill="#8A929E">0.4 s</text>
-        </g>
-      </svg>
-      <div class="scopelabels">
-        <div data-en>Discharge voltage<b>100 V</b></div>
-        <div data-ko>방전 전압<b>100 V</b></div>
-        <div data-en>Tool electrode<b>ø100 µm</b></div>
-        <div data-ko>공구 전극<b>ø100 µm</b></div>
-        <div data-en>Workpiece<b>SUS304 · t0.5</b></div>
-        <div data-ko>공작물<b>SUS304 · t0.5</b></div>
-        <div data-en>Control loop<b>0.2 s</b></div>
-        <div data-ko>제어 주기<b>0.2 s</b></div>
-      </div>
-    </div>
-  </div>
-</header>
-
-<section id="work">
-  <div class="wrap">
-    <div class="sechead">
-      <span class="eyebrow">01</span>
-      <h2 data-en>Selected work</h2>
-      <h2 data-ko>주요 연구</h2>
-    </div>
-
-    <article class="entry">
-      <div class="meta">
-        <span class="tag rev" data-en>Under review</span>
-        <span class="tag rev" data-ko>심사 중</span>
-        2025 — 2026<br>Precision Engineering Lab<br>Soongsil Univ.
-      </div>
-      <div>
-        <h3 data-en>Development and Experimental Validation of a Risk-Aware Intelligent Adaptive Feed Control System for Micro-EDM</h3>
-        <h3 data-ko>인공지능을 활용한 미세 방전 가공의 공구 이송 제어 및 효율성 향상</h3>
-        <p data-en>
-          Conventional micro-EDM feeds the tool on a fixed voltage threshold, which cannot see a short circuit coming.
-          We built a hybrid stepper + piezo drive to remove backlash, then replaced the threshold with three classifiers
-          reading the discharge signal live: nine statistical features into classical ML, voltage waveform images into
-          EfficientNet-b1, and depth-conditioned time series into a Bi-LSTM. LabVIEW closes the loop every 0.2 s.
-          Bi-LSTM won — and the same controller held up on a ø200 µm electrode without retraining.
-        </p>
-        <p data-ko>
-          기존 미세 방전가공은 고정 임계값으로 공구를 이송해 단락을 미리 감지하지 못합니다.
-          스텝모터 + 피에조 하이브리드 구동부로 백래시를 제거하고, 임계값 대신 방전 신호를 실시간으로 읽는
-          세 가지 분류기를 적용했습니다 — 9개 통계 특징 기반 머신러닝, 전압 파형 이미지 기반 EfficientNet-b1,
-          가공 깊이를 반영한 Bi-LSTM. LabVIEW로 0.2초마다 제어 루프를 닫았습니다.
-          Bi-LSTM이 가장 우수했고, ø200 µm 전극 조건에서도 재학습 없이 동일 성능을 유지했습니다.
-        </p>
-        <div class="results">
-          <div><span data-en>Time reduction</span><span data-ko>가공시간 단축</span><b>33.4%</b></div>
-          <div><span data-en>Penetration</span><span data-ko>관통 시간</span><b>284.7 s</b></div>
-          <div><span>Bi-LSTM AUC</span><b>0.98</b></div>
-          <div><span data-en>Generality ø200µm</span><span data-ko>범용성 ø200µm</span><b>17.9%</b></div>
+      <div class="hero-stats">
+        <div class="stat">
+          <div class="stat-label" data-en>GPA</div>
+          <div class="stat-label" data-ko>전체학점</div>
+          <div class="stat-value">3.56</div>
         </div>
-        <span class="authors">Chan Bin Oh, <em>Jin Ha Kim</em>, Bo Hyun Kim</span>
-        <span class="venue">International Journal of Precision Engineering and Manufacturing — under review<br>Presented at KSPE Autumn Conference 2025</span>
-      </div>
-    </article>
-
-    <article class="entry">
-      <div class="meta">
-        <span class="tag" data-en>Published</span>
-        <span class="tag" data-ko>게재</span>
-        2024<br>Renewable Energy Lab<br>Soongsil Univ.
-      </div>
-      <div>
-        <h3>Development of foldable air-breathing polymer electrolyte membrane fuel cells for power sources of next-generation flexible electronics</h3>
-        <p data-en>
-          Flexible electronic devices require power sources capable of withstanding repeated folding. In this study, 
-          we developed an air-breathing polymer electrolyte membrane (PEM) fuel cell that remains operational even under 
-          repeated folding conditions. Instead of forcing rigid batteries into flexible devices, we designed the power 
-          source itself to bend along with the device. I was responsible for the design of the cell and the flow channels.
-        </p>
-        <p data-ko>
-          유연 전자기기에는 접히는 환경을 견디는 전원이 필요합니다. 본 연구에서는 반복적인 접힘 조건에서도
-          작동하는 공기호흡형 고분자전해질막(PEM) 연료전지를 개발했습니다. 딱딱한 배터리를 유연 기기에
-          억지로 넣는 대신, 전원 자체가 기기와 함께 휘어질 수 있도록 했습니다. 셀 및 유로채널 설계 파트를 담당했습니다.
-        </p>
-        <span class="authors">Jiwon Baek, Sun-ung Moon, <em>Jinha Kim</em>, Hongnyoung Yoo, Young-Je Kwark, Taehyun Park</span>
-        <span class="venue">Journal of Power Sources, Vol. 589, p. 233771, 2024 · SCI</span>
-      </div>
-    </article>
-
-    <article class="entry">
-      <div class="meta">
-        <span class="tag" data-en>Award</span>
-        <span class="tag" data-ko>수상</span>
-        2025.11<br>KSPE
-      </div>
-      <div>
-        <h3 data-en>Special Prize (3rd), KSPE Creative Design Competition</h3>
-        <h3 data-ko>한국정밀공학회 창의경진대회 특별상 (3위)</h3>
-        <p data-en>
-          Awarded by the Korean Society for Precision Engineering and the Academy-Industry Foundation
-          for the AI-based tool feed control system above.
-        </p>
-        <p data-ko>
-          한국정밀공학회·산학협동재단 주관, 위 AI 기반 공구 이송 제어 시스템으로 수상했습니다.
-        </p>
-      </div>
-    </article>
-  </div>
-</section>
-
-<section id="skills">
-  <div class="wrap">
-    <div class="sechead">
-      <span class="eyebrow">02</span>
-      <h2 data-en>What I work with</h2>
-      <h2 data-ko>역량</h2>
-    </div>
-            <div class="skillgrid">
-      <div>
-        <h3 data-en>Experiment &amp; design</h3>
-        <h3 data-ko>실험 · 설계</h3>
-        <ul>
-          <li><b>Micro-EDM</b> <span data-en>— machining experiments, data acquisition</span><span data-ko>— 가공 실험, 데이터 수집</span></li>
-          <li><b data-en>Fuel cell design</b><b data-ko>연료전지 설계</b> <span data-en>— casing and flow channel</span><span data-ko>— 케이스 및 유로 채널</span></li>
-          <li><b>Autodesk Inventor</b> <span data-en>— coursework</span><span data-ko>— 수업 과정</span></li>
-          <li><b>AutoCAD</b> <span data-en>— coursework</span><span data-ko>— 수업 과정</span></li>
-          <li><b>SOLIDWORKS</b> <span data-en>— CSWA in progress</span><span data-ko>— CSWA 취득 준비 중</span></li>
-        </ul>
-      </div>
-           <div>
-        <h3 data-en>Analysis &amp; code</h3>
-        <h3 data-ko>분석 · 코드</h3>
-        <ul>
-          <li><b>Python</b> <span data-en>— data analysis, NumPy, pandas</span><span data-ko>— 데이터 분석, NumPy, pandas</span></li>
-          <li><b>PyTorch</b> <span data-en>— CNN, Bi-LSTM for discharge signal classification</span><span data-ko>— 방전 신호 분류용 CNN, Bi-LSTM</span></li>
-          <li><b>MATLAB</b> <span data-en>— signal and data processing</span><span data-ko>— 신호 및 데이터 처리</span></li>
-          <li><b>C#</b> <span data-en>— game development, Unity</span><span data-ko>— 게임 개발, Unity</span></li>
-          <li><b>ROS</b> <span data-en>— LiDAR mapping, parameter tuning</span><span data-ko>— LiDAR 맵핑, 파라미터 튜닝</span></li>
-        </ul>
-      </div>
-      <div>
-        <h3 data-en>Languages</h3>
-        <h3 data-ko>언어</h3>
-        <ul>
-          <li><b data-en>Korean</b><b data-ko>한국어</b> <span data-en>— native</span><span data-ko>— 모국어</span></li>
-          <li><b data-en>English</b><b data-ko>영어</b> — TOEIC Speaking IM3 <span data-en>(IELTS scheduled Oct 2026)</span><span data-ko>(IELTS 2026.10 응시 예정)</span></li>
-          <li><b data-en>German</b><b data-ko>독일어</b> <span data-en>— A1, Goethe A2 scheduled Oct 2026</span><span data-ko>— A1, Goethe A2 2026.10 응시 예정</span></li>
-        </ul>
+        <div class="stat">
+          <div class="stat-label" data-en>Major GPA</div>
+          <div class="stat-label" data-ko>전공학점</div>
+          <div class="stat-value">3.66</div>
+        </div>
+        <div class="stat">
+          <div class="stat-label" data-en>Publications</div>
+          <div class="stat-label" data-ko>논문</div>
+          <div class="stat-value">2</div>
+        </div>
+        <div class="stat">
+          <div class="stat-label" data-en>Awards</div>
+          <div class="stat-label" data-ko>수상</div>
+          <div class="stat-value">1</div>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section id="path">
-  <div class="wrap">
-    <div class="sechead">
-      <span class="eyebrow">03</span>
-      <h2 data-en>Path</h2>
-      <h2 data-ko>이력</h2>
+  <section>
+    <div class="wrap">
+      <h2 data-en>Core Skills</h2>
+      <h2 data-ko>핵심 역량</h2>
+      <h2 data-de>Kernkompetenzen</h2>
+
+      <div class="card-grid">
+        <div class="card">
+          <h3 data-en>CAD & Design</h3>
+          <h3 data-ko>CAD · 설계</h3>
+          <ul style="margin: 12px 0; font-size: 0.9rem;">
+            <li><strong>Autodesk Inventor</strong>
+              <ul style="margin: 8px 0 0 0; padding-left: 16px; font-size: 0.85rem; color: var(--ink-soft);">
+                <li data-en>CAD Coursework: 2D/3D technical drawing</li>
+                <li data-ko>전산기계제도 수업: 2D/3D 도면 작성</li>
+                <li data-en>Machine Practice: component modeling</li>
+                <li data-ko>기계공작실습 수업: 부품 모델링</li>
+                <li data-en>Foldable Fuel Cell: housing & flow channel design</li>
+                <li data-ko>연료전지: 케이싱 및 유로 채널 설계</li>
+                <li data-en>CAM Coursework: spindle fixture 3D assembly + modal analysis</li>
+                <li data-ko>전산응용가공: 스핀들 클램프 3D 어셈블리 및 모달해석</li>
+              </ul>
+            </li>
+            <li style="margin-top: 12px;"><strong>AutoCAD</strong>
+              <ul style="margin: 8px 0 0 0; padding-left: 16px; font-size: 0.85rem; color: var(--ink-soft);">
+                <li data-en>CAD Coursework: 2D technical drawing & dimensioning</li>
+                <li data-ko>전산기계제도 수업: 2D 도면 작성 및 치수 표기</li>
+                <li data-en>Machine Practice: assembly drawings</li>
+                <li data-ko>기계공작실습 수업: 조립 도면</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3 data-en>Data & ML</h3>
+          <h3 data-ko>데이터 · 머신러닝</h3>
+          <ul style="margin: 12px 0; font-size: 0.9rem;">
+            <li><strong>Python</strong>
+              <ul style="margin: 8px 0 0 0; padding-left: 16px; font-size: 0.85rem; color: var(--ink-soft);">
+                <li data-en>Student Govt: asset management program development</li>
+                <li data-ko>과학생회: 비품 관리 프로그램 제작</li>
+                <li data-en>Precision Engineering Award: ML model deployment & signal processing</li>
+                <li data-ko>정밀공학 경진대회: ML 모델 배포 및 신호 처리</li>
+              </ul>
+            </li>
+            <li style="margin-top: 12px;"><strong>PyTorch</strong>
+              <ul style="margin: 8px 0 0 0; padding-left: 16px; font-size: 0.85rem; color: var(--ink-soft);">
+                <li data-en>Deep learning models: CNN-TCN, Bi-LSTM, QCL classification</li>
+                <li data-ko>딥러닝 모델: CNN-TCN, Bi-LSTM, QCL 분류 모델 구축</li>
+              </ul>
+            </li>
+            <li style="margin-top: 12px;"><strong>MATLAB</strong>
+              <ul style="margin: 8px 0 0 0; padding-left: 16px; font-size: 0.85rem; color: var(--ink-soft);">
+                <li data-en>Mechanical Vibration: vibration calculation & analysis</li>
+                <li data-ko>기계진동학: 진동 계산 및 분석</li>
+                <li data-en>Micro-EDM Research: data processing, PCA, classical ML (RF, SVM, KNN)</li>
+                <li data-ko>미세방전 연구: 데이터 처리, PCA, 고전 ML 모델</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3 data-en>Game Development & Tools</h3>
+          <h3 data-ko>게임 개발 · 도구</h3>
+          <ul style="margin: 12px 0; font-size: 0.9rem;">
+            <li><strong>Unity & C#</strong>
+              <ul style="margin: 8px 0 0 0; padding-left: 16px; font-size: 0.85rem; color: var(--ink-soft);">
+                <li data-en>BRIDGE Game Dev: Android game development, UI implementation</li>
+                <li data-ko>BRIDGE 게임 개발: 안드로이드 게임, UI 및 보조 기능 구현</li>
+                <li data-en>Data externalization via Google Sheets API</li>
+                <li data-ko>Google Sheets API를 통한 데이터 외부화</li>
+              </ul>
+            </li>
+            <li style="margin-top: 12px;"><strong>LabVIEW</strong>
+              <ul style="margin: 8px 0 0 0; padding-left: 16px; font-size: 0.85rem; color: var(--ink-soft);">
+                <li data-en>Real-time micro-EDM feed control integration</li>
+                <li data-ko>미세방전 이송 제어 실시간 통합</li>
+              </ul>
+            </li>
+            <li style="margin-top: 12px;"><strong>Microsoft Office</strong>
+              <ul style="margin: 8px 0 0 0; padding-left: 16px; font-size: 0.85rem; color: var(--ink-soft);">
+                <li>MOS Excel 2016 Expert (2024)</li>
+              </ul>
+            </li>
+            <li style="margin-top: 12px;"><strong>Google Sheets</strong>
+              <ul style="margin: 8px 0 0 0; padding-left: 16px; font-size: 0.85rem; color: var(--ink-soft);">
+                <li data-en>Game data externalization & automation</li>
+                <li data-ko>게임 데이터 외부화 및 자동화</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
-    <div class="tl">
-      <div class="tlitem">
-        <div class="when">2021.02 — 2022.11</div>
-        <h3 data-en>BRIDGE Inter-University Game Development Club</h3>
-        <h3 data-ko>대학생 연합 게임 제작 동아리 BRIDGE</h3>
-        <p data-en>9th Cohort Programmer.<br>2021.03 – 2022.11 Assistant Programmer for the mystery puzzle game <i>Painting Detective</i>.</p>
-        <p data-ko>9기 프로그래머.<br>2021.03 – 2022.11 미스터리 퍼즐 게임 &lsquo;그림 탐정&rsquo; 보조 프로그래머.</p>
-      </div>
+  </section>
 
-      <div class="tlitem">
-        <div class="when">2022.02 — 2022.11</div>
-        <h3 data-en>SSARA Automotive Research Society, Dept. of Mechanical Engineering</h3>
-        <h3 data-ko>기계공학부 자동차연구회 SSARA</h3>
-        <p data-en>Wiring Team Member. <br>2022.10 Participated in the KASA Student Creative Vehicle Competition.</p>
-        <p data-ko>배선팀 팀원. <br>2022.10 대학생 창작자동차 경진대회 KASA 참가.</p>
-      </div>
+  <section>
+    <div class="wrap">
+      <h2 data-en>Languages & Certifications</h2>
+      <h2 data-ko>언어 · 자격증</h2>
 
-      <div class="tlitem">
-        <div class="when">2022.03 — 2024.02</div>
-        <h3 data-en>Facilities Division Member, Mechanical Engineering Student Council, Soongsil University</h3>
-        <h3 data-ko>숭실대학교 기계공학부 과학생회, 시설관리부 부원</h3>
-      </div>
-
-      <div class="tlitem">
-        <div class="when">2022.11 — 2023.03</div>
-        <h3 data-en>Renewable Energy Application Lab, Soongsil University, Undergraduate Researcher</h3>
-        <h3 data-ko>숭실대학교 신재생에너지응용 실험실, 학부연구생</h3>
-        <p class="pub">Jiwon Baek, Sun-ung Moon, <em>Jinha Kim</em>, Hongnyoung Yoo, Young-Je Kwark, Taehyun Park, &ldquo;Development of foldable air-breathing polymer electrolyte membrane fuel cells for power sources of next-generation flexible electronics,&rdquo; <i>Journal of Power Sources</i>, Vol. 589, p. 233771, 2024.</p>
-      </div>
-
-      <div class="tlitem">
-        <div class="when">2023.02 — 2023.06</div>
-        <h3 data-en>Control Systems Society, Dept. of Mechanical Engineering, Soongsil University, LiDAR Mapping Team Member</h3>
-        <h3 data-ko>숭실대학교 기계공학부 제어학회, LiDAR 맵핑팀 팀원</h3>
-      </div>
-
-      <div class="tlitem">
-        <div class="when">2024.03 — 2026.02</div>
-        <h3 data-en>Kendo Club, Soongsil University</h3>
-        <h3 data-ko>숭실대학교 중앙 검도 동아리, 숭검회</h3>
-        <p data-en>4th kyu, Korea Kumdo Association.</p>
-        <p data-ko>대한검도회 4급.</p>
-      </div>
-
-      <div class="tlitem">
-        <div class="when">2025.11</div>
-        <h3 data-en>10th KSPE Creative Design Competition, </h3>
-        <h3 data-ko>한국정밀공학회 KSPE 창의경진대회 10회</h3>
-        <p data-en>Improving tool feed control and efficiency in micro-EDM using artificial intelligence<br>Special Prize (3rd, Academy-Industry Foundation)</p>
-        <p data-ko>인공지능을 활용한 미세 방전 가공의 공구 이송제어 및 효율성 향상<br>특별상 (3위, 산학협동재단)</p>
-      </div>
-
-      <div class="tlitem">
-        <div class="when">2025.11 — 2026.03</div>
-        <h3 data-en>Precision Engineering Lab, Soongsil University, Undergraduate Researcher</h3>
-        <h3 data-ko>숭실대학교 정밀공학 실험실, 학부연구생</h3>
-        <p class="pub">Chan Bin Oh, <em>Jin Ha Kim</em>, Bo Hyun Kim, &ldquo;Development and Experimental Validation of a Risk-Aware Intelligent Adaptive Feed Control System for Micro-EDM,&rdquo; <i>International Journal of Precision Engineering and Manufacturing</i>. <span data-en>Under review.</span><span data-ko>심사 중.</span></p>
-      </div>
-
-      <div class="tlitem">
-        <div class="when">2026.02</div>
-        <h3 data-en>B.S. Mechanical Engineering, Soongsil University</h3>
-        <h3 data-ko>숭실대학교 기계공학부 학사 졸업</h3>
-        <p data-en>GPA 3.56 / 4.5<br>2021.03 Entered the Department of Physics<br>2022.01 Transferred to the School of Mechanical Engineering</p>
-        <p data-ko>학점 3.56 / 4.5<br>2021.03 숭실대학교 물리학과 입학<br>2022.01 숭실대학교 기계공학부 전과</p>
+      <div class="card-grid">
+        <div class="card">
+          <h3 data-en>Languages</h3>
+          <h3 data-ko>언어</h3>
+          <ul>
+            <li><strong data-en>Korean</strong><strong data-ko>한국어</strong> — native</li>
+            <li><strong data-en>English</strong><strong data-ko>영어</strong> — TOEIC Speaking IM3 (2026)</li>
+            <li><strong data-en>German</strong><strong data-ko>독일어</strong> — conversational</li>
+            <li><strong data-en>German Sign Language</strong><strong data-ko>독일 수어</strong> — basic</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3 data-en>Certifications</h3>
+          <h3 data-ko>자격증</h3>
+          <ul>
+            <li><strong>MOS Excel 2016 Expert</strong> (2024)</li>
+            <li><strong data-en>Korean Kumdo Association</strong><strong data-ko>대한검도회</strong> — 4th Kyu (2024)</li>
+          </ul>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
+</div>
 
-<footer id="contact">
-  <div class="wrap">
-    <span class="eyebrow">04</span>
-    <h2 style="font-size:clamp(1.7rem,4.4vw,2.7rem);font-weight:700;margin-top:14px" data-en>Let's talk.</h2>
-    <h2 style="font-size:clamp(1.7rem,4.4vw,2.7rem);font-weight:700;margin-top:14px" data-ko>연락 주세요.</h2>
-    <p style="max-width:34em;margin-top:14px;color:var(--ink-soft)" data-en>
-      Looking for a position in process technology or quality control.
-    </p>
-    <p style="max-width:34em;margin-top:14px;color:var(--ink-soft)" data-ko>
-      공정기술, 품질관리 직무에 관심이 있습니다.
-    </p>
-    <div class="contactlinks">
-      <a href="mailto:drkjh1031@naver.com">drkjh1031@naver.com</a>
-      <a href="https://www.linkedin.com/in/jinha-kim-0b0233406/" target="_blank" rel="noopener">LINKEDIN</a>
-      <a href="https://github.com/drkjh1031" target="_blank" rel="noopener">GITHUB</a>
+<!-- PROJECTS PAGE -->
+<div id="projects" class="page">
+  <section>
+    <div class="wrap">
+      <h2 data-en>Projects & Research</h2>
+      <h2 data-ko>프로젝트 · 연구</h2>
+
+      <!-- PROJECT 1 -->
+      <h3 data-en>Micro-EDM Feed Control with AI</h3>
+      <h3 data-ko>인공지능 미세방전가공 이송 제어</h3>
+      <table class="project-table">
+        <tr>
+          <th data-en>Duration</th><td>2025.11 – 2026.03</td>
+        </tr>
+        <tr>
+          <th data-en>Tools</th><td><strong>Python, PyTorch, MATLAB, LabVIEW, NumPy, Pandas</strong></td>
+        </tr>
+        <tr>
+          <th data-en>Goal</th><td data-en>Replace fixed voltage thresholds with intelligent signal classification to reduce machining time and prevent tool breakage</td>
+          <td data-ko>고정 전압 임계값을 지능형 신호 분류로 대체하여 가공 시간 단축 및 공구 파손 방지</td>
+        </tr>
+        <tr>
+          <th data-en>My Role</th><td data-en>Signal analysis (MATLAB PCA), ML model development (Python: CNN-TCN, Bi-LSTM, QCL), LabVIEW real-time control integration</td>
+          <td data-ko>신호 분석 (MATLAB PCA), ML 모델 개발 (Python: CNN-TCN, Bi-LSTM, QCL), LabVIEW 실시간 제어 통합</td>
+        </tr>
+        <tr>
+          <th data-en>Results</th><td>
+            • <strong>33.4%</strong> machining time reduction (427.3s → 284.7s)<br>
+            • <strong>98.9%</strong> short-circuit prediction accuracy (Bi-LSTM)<br>
+            • <strong>KSPE Award:</strong> Special Prize, 3rd place (2025.11.14)
+          </td>
+        </tr>
+        <tr>
+          <th data-en>Publication</th><td>Oh, C.B., Kim, J.H., Kim, B.H. "Development and Experimental Validation of a Risk-Aware Intelligent Adaptive Feed Control System for Micro-EDM." <em>International Journal of Precision Engineering and Manufacturing</em> (under review)</td>
+        </tr>
+      </table>
+
+      <!-- PROJECT 2 -->
+      <h3 data-en>Foldable PEM Fuel Cells</h3>
+      <h3 data-ko>접이식 연료전지</h3>
+      <table class="project-table">
+        <tr>
+          <th data-en>Duration</th><td>2022.11 – 2023.03</td>
+        </tr>
+        <tr>
+          <th data-en>Tools</th><td><strong>Autodesk Inventor, CAD modeling</strong></td>
+        </tr>
+        <tr>
+          <th data-en>Goal</th><td data-en>Design flexible fuel cells for wearable electronics by maintaining power output under repeated folding</td>
+          <td data-ko>반복 접힘에서도 성능을 유지하는 웨어러블용 유연 연료전지 설계</td>
+        </tr>
+        <tr>
+          <th data-en>My Role</th><td data-en>Housing and flow channel design (Inventor), mechanical tolerance validation, electrical performance testing</td>
+          <td data-ko>케이싱 및 유로 설계 (Inventor), 기계적 변형 허용도 검증, 전기 성능 테스트</td>
+        </tr>
+        <tr>
+          <th data-en>Results</th><td>
+            • <strong>500+ fold cycles</strong> with maintained power output<br>
+            • Validated lightweight design without sacrificing stiffness
+          </td>
+        </tr>
+        <tr>
+          <th data-en>Publication</th><td>Baek, J., Moon, S., <strong>Kim, J.</strong> (3rd author), et al. (2024). "Development of foldable air-breathing polymer electrolyte membrane fuel cells for power sources of next-generation flexible electronics." <em>Journal of Power Sources</em>, 589, 233771. [SCI]</td>
+        </tr>
+      </table>
+
+      <!-- PROJECT 3 -->
+      <h3 data-en>Game Development - Data Externalization</h3>
+      <h3 data-ko>게임 개발 - 데이터 외부화</h3>
+      <table class="project-table">
+        <tr>
+          <th data-en>Duration</th><td>2021.03 – 2022.11</td>
+        </tr>
+        <tr>
+          <th data-en>Tools</th><td><strong>Unity, C#, Google Sheets API, Microsoft Office</strong></td>
+        </tr>
+        <tr>
+          <th data-en>Goal</th><td data-en>Reduce iteration friction by moving game data from code to shared spreadsheets, enabling designers to work independently</td>
+          <td data-ko>게임 데이터를 코드에서 공유 스프레드시트로 이동하여 기획자의 독립적 작업 가능하게 함</td>
+        </tr>
+        <tr>
+          <th data-en>My Role</th><td data-en>Data architecture redesign, C# serialization layer implementation, Google Sheets API integration, game UI & auxiliary features (Unity)</td>
+          <td data-ko>데이터 아키텍처 재설계, C# 시리얼화 계층 구현, Google Sheets API 통합, 게임 UI 및 보조 기능 (Unity)</td>
+        </tr>
+        <tr>
+          <th data-en>Results</th><td>
+            • <strong>~90% reduction</strong> in programmer context-switches<br>
+            • <strong>0-day lead time</strong> for content updates<br>
+            • Project shipped November 2022 (after 2 years despite scope creep)
+          </td>
+        </tr>
+        <tr>
+          <th data-en>Team</th><td data-en>BRIDGE (Inter-University Game Development Club), 9th cohort programmer | Team: "JuJak Games"</td>
+          <td data-ko>대학생 연합 게임 제작 동아리 BRIDGE, 9기 프로그래머 | 팀: "주작 게임즈"</td>
+        </tr>
+      </table>
+
+      <!-- PROJECT 4 -->
+      <h3 data-en>Spindle Fixture - CAM & Modal Analysis</h3>
+      <h3 data-ko>스핀들 클램프 - 전산응용가공 및 모달해석</h3>
+      <table class="project-table">
+        <tr>
+          <th data-en>Duration</th><td>2025-2 Semester (coursework)</td>
+        </tr>
+        <tr>
+          <th data-en>Tools</th><td><strong>Autodesk Inventor, FEA/Modal Analysis, CAD design</strong></td>
+        </tr>
+        <tr>
+          <th data-en>Goal</th><td data-en>Design spindle fixture system with reduced resonance frequencies and eliminated rigid body modes for precision machining</td>
+          <td data-ko>공진 주파수 감소 및 강체모드 제거로 정밀 가공용 스핀들 클램프 설계</td>
+        </tr>
+        <tr>
+          <th data-en>My Role</th><td data-en>CAD design (Inventor 3D assembly: spindle, clamp, supports, rollers), FEA modal analysis, soft spring optimization, stress validation</td>
+          <td data-ko>CAD 설계 (Inventor 3D 어셈블리: 스핀들, 클램프, 지지대, 롤러), FEA 모달해석, 소프트 스프링 최적화, 응력 검증</td>
+        </tr>
+        <tr>
+          <th data-en>Results</th><td>
+            • <strong>3 rigid modes eliminated</strong><br>
+            • <strong>1st mode shifted 40%</strong><br>
+            • Soft spring decoupling confirmed through FEA
+          </td>
+        </tr>
+        <tr>
+          <th data-en>Deliverables</th><td data-en>3D assembly (Inventor .iam), stress analysis report (HTML), soft spring STEP model, 3D animation</td>
+          <td data-ko>3D 조립 모델 (Inventor .iam), 응력 해석 보고서 (HTML), 소프트 스프링 모델, 3D 애니메이션</td>
+        </tr>
+      </table>
     </div>
-    <p class="colophon">Jinha Kim · Seoul, Republic of Korea · Last updated August 2026</p>
-  </div>
-</footer>
+  </section>
+</div>
+
+<!-- EXPERIENCE PAGE -->
+<div id="experience" class="page">
+  <section>
+    <div class="wrap">
+      <h2 data-en>Education & Experience</h2>
+      <h2 data-ko>학력 · 경력</h2>
+
+      <div class="card-grid">
+        <div class="card">
+          <h3 data-en>Education</h3>
+          <h3 data-ko>학력</h3>
+          <ul>
+            <li><strong>Soongsil University</strong> (2021 – 2026)<br>B.S. Mechanical Engineering<br>GPA: 3.56/4.5 | Major: 3.66/4.5</li>
+            <li style="margin-top: 12px;"><strong data-en>Ewha Womans High School</strong><strong data-ko>이화여자고등학교</strong> (2017 – 2020)</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3 data-en>Research</h3>
+          <h3 data-ko>연구</h3>
+          <ul>
+            <li><strong data-en>Precision Engineering Lab</strong><strong data-ko>정밀공학 실험실</strong> (2025.11 – 2026.03)<br><span style="color: var(--ink-soft); font-size: 0.9rem;" data-en>Micro-EDM feed control, deep learning models</span><span style="color: var(--ink-soft); font-size: 0.9rem;" data-ko>미세방전 이송 제어, 딥러닝 모델</span></li>
+            <li style="margin-top: 8px;"><strong data-en>Renewable Energy Lab</strong><strong data-ko>신재생에너지 실험실</strong> (2022.11 – 2023.03)<br><span style="color: var(--ink-soft); font-size: 0.9rem;" data-en>Foldable fuel cell design, Inventor CAD</span><span style="color: var(--ink-soft); font-size: 0.9rem;" data-ko>접이식 연료전지 설계, Inventor CAD</span></li>
+          </ul>
+        </div>
+
+        <div class="card" style="grid-column: 1/-1;">
+          <h3 data-en>Activities & Leadership — Detailed</h3>
+          <h3 data-ko>활동 · 리더십 상세</h3>
+        </div>
+
+        <div class="card">
+          <h3 style="margin-top: 0;" data-en>SSARA (Auto Racing Club)</h3>
+          <h3 style="margin-top: 0;" data-ko>SSARA (자동차연구회)</h3>
+          <div style="font-size: 0.9rem; color: var(--ink-faint); margin-bottom: 12px;">2022.02 – 2022.11 | Wiring Team Member</div>
+          <ul style="font-size: 0.9rem;">
+            <li data-en><strong>Electrical Harness Design:</strong> Designed and mapped power distribution harness for student-built racing car integrating battery, motor controller, sensors, and safety circuits</li>
+            <li data-ko><strong>전기 배선 설계:</strong> 학생이 설계한 경주차를 위한 배터리, 모터 컨트롤러, 센서, 안전 회로를 통합하는 전원 배선 설계 및 매핑</li>
+            <li data-en><strong>System Integration:</strong> Collaborated with mechanical and software teams to ensure electrical system compatibility with chassis and motor control logic</li>
+            <li data-ko><strong>시스템 통합:</strong> 기계팀, 소프트웨어팀과 협력하여 전기 시스템이 차대와 모터 제어 로직과 호환되도록 보장</li>
+            <li data-en><strong>KASA Participation (2022):</strong> Contributed to collegiate automotive engineering competition entry; gained exposure to professional-grade vehicle development standards</li>
+            <li data-ko><strong>KASA 참가 (2022):</strong> 대학생 창작자동차 경진대회에 참여; 전문 수준의 차량 개발 표준 경험</li>
+            <li data-en><strong>Team Size:</strong> 10+ members across electrical, mechanical, firmware, and competition management roles</li>
+            <li data-ko><strong>팀 규모:</strong> 전기, 기계, 펌웨어, 경진대회 관리 분야 10명 이상</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3 style="margin-top: 0;" data-en>Department of Mechanical Engineering Student Government</h3>
+          <h3 style="margin-top: 0;" data-ko>기계공학부 과학생회</h3>
+          <div style="font-size: 0.9rem; color: var(--ink-faint); margin-bottom: 12px;">2022.03 – 2024.02 | Admin Officer (두 임기)</div>
+          
+          <div style="margin-bottom: 18px;">
+            <strong data-en>33rd Council "SOL" (2022.03 – 2023.02)</strong>
+            <strong data-ko>33대 과학생회 "SOL" (2022.03 – 2023.02)</strong>
+            <ul style="font-size: 0.9rem; margin-top: 8px;">
+              <li data-en><strong>Departmental Asset Management:</strong> Maintained inventory of ~50+ lab equipment, tools, and consumables; tracked checkout/return logs manually</li>
+              <li data-ko><strong>부서 자산 관리:</strong> 약 50개 이상의 실험실 기기, 공구, 소모품 인벤토리 관리; 대출/반납 기록 수작업 관리</li>
+              <li data-en><strong>Problem Identified:</strong> Manual tracking was error-prone, time-consuming, and lacked audit trail; frequent equipment loss and misplacement</li>
+              <li data-ko><strong>문제 파악:</strong> 수작업 추적은 오류가 많고 시간이 걸리며 감시 추적이 부족; 장비 분실 및 오배치 빈번</li>
+            </ul>
+          </div>
+
+          <div style="margin-bottom: 18px;">
+            <strong data-en>34th Council "Moment" (2023.03 – 2024.02)</strong>
+            <strong data-ko>34대 과학생회 "Moment" (2023.03 – 2024.02)</strong>
+            <ul style="font-size: 0.9rem; margin-top: 8px;">
+              <li data-en><strong>Asset Management System Development (Python):</strong> Designed and implemented digital inventory program replacing manual spreadsheets</li>
+              <li data-ko><strong>자산 관리 시스템 개발 (Python):</strong> 수작업 스프레드시트를 대체하는 디지털 인벤토리 프로그램 설계 및 구현</li>
+              <li data-en><strong>Key Features:</strong>
+                <ul style="margin: 6px 0 0 0; padding-left: 16px;">
+                  <li data-en>Equipment database with item ID, location, purchase date, condition status</li>
+                  <li data-ko>아이템 ID, 위치, 구매일, 상태 상태 포함 장비 데이터베이스</li>
+                  <li data-en>Automated checkout/return logging with timestamp and borrower name</li>
+                  <li data-ko>타임스탬프 및 차용자 이름으로 자동 대출/반납 기록</li>
+                  <li data-en>Usage reports and equipment status dashboard</li>
+                  <li data-ko>사용 보고서 및 장비 상태 대시보드</li>
+                  <li data-en>Alert system for overdue returns or missing items</li>
+                  <li data-ko>연체 반납 또는 분실 아이템에 대한 알림 시스템</li>
+                </ul>
+              </li>
+              <li data-en><strong>Results:</strong> Reduced administrative overhead by ~70%, eliminated manual record entry, established complete audit trail of all equipment movements</li>
+              <li data-ko><strong>성과:</strong> 행정 부담 약 70% 감소, 수작업 기록 항목 제거, 모든 장비 이동의 완전한 감시 추적 확립</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3 style="margin-top: 0;" data-en>Central Kumdo Club "Sunggeokhoe"</h3>
+          <h3 style="margin-top: 0;" data-ko>중앙검도동아리 "숭검회"</h3>
+          <div style="font-size: 0.9rem; color: var(--ink-faint); margin-bottom: 12px;">2024.03 – 2026.02 | Regular Member</div>
+          <ul style="font-size: 0.9rem;">
+            <li data-en><strong>Korean Martial Arts Training:</strong> Participated in regular kumdo (Korean sword martial art) practice sessions 2–3 times per week</li>
+            <li data-ko><strong>한국 전통 무술 훈련:</strong> 주 2–3회 검도 (한국 검 무술) 정기 훈련 참여</li>
+            <li data-en><strong>Skill Development:</strong>
+              <ul style="margin: 6px 0 0 0; padding-left: 16px; font-size: 0.85rem;">
+                <li data-en>Footwork & positioning: advanced stances and balance under load</li>
+                <li data-ko>발수 및 위치: 고급 자세 및 부하 시 균형</li>
+                <li data-en>Strike technique: accurate sword strikes (attack and parry)</li>
+                <li data-ko>타격 기술: 정확한 검술 (공격 및 방어)</li>
+                <li data-en>Sparring & match strategy: competitive kumdo bout experience</li>
+                <li data-ko>대련 및 경기 전략: 경쟁 검도 경험</li>
+              </ul>
+            </li>
+            <li style="margin-top: 8px;" data-en><strong>Official Certification:</strong> Tested and passed Korean Martial Arts Association (KMA) 4th Kyu exam (January 2024) — demonstrates proficiency in fundamentals and intermediate techniques</li>
+            <li style="margin-top: 8px;" data-ko><strong>정식 자격증:</strong> 대한검도회 4급 시험 합격 (2024년 1월) — 기초 및 중급 기술 숙련도 입증</li>
+            <li data-en><strong>Personal Growth:</strong> Developed mental discipline, physical resilience, and focus through martial arts practice; cultivated respect for tradition and peer learning environment</li>
+            <li data-ko><strong>개인 성장:</strong> 무술 연습을 통한 정신적 규율, 신체적 회복력, 집중력 배양; 전통 존중 및 동료 학습 환경 조성</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3 style="margin-top: 0;" data-en>Education Volunteer</h3>
+          <h3 style="margin-top: 0;" data-ko>교육 봉사</h3>
+          <div style="font-size: 0.9rem; color: var(--ink-faint); margin-bottom: 12px;">2025.06 – 2025.09 | 20 hours total</div>
+          <ul style="font-size: 0.9rem;">
+            <li data-en><strong>Organization:</strong> Gwanakjump Social Cooperative — "Kkumdungshi" Community Children's Center (관악점프사회적협동조합 꿈둥지 지역아동센터)</li>
+            <li data-ko><strong>기관:</strong> 관악점프사회적협동조합 꿈둥지 지역아동센터</li>
+            <li data-en><strong>Target Population:</strong> Elementary and middle school students from low-income families; after-school support and mentoring</li>
+            <li data-ko><strong>대상:</strong> 저소득 가정 초·중학생; 방과 후 지원 및 멘토링</li>
+            <li data-en><strong>Tutoring Subjects:</strong>
+              <ul style="margin: 6px 0 0 0; padding-left: 16px; font-size: 0.85rem;">
+                <li data-en>Mathematics: problem-solving, arithmetic foundations, equation solving</li>
+                <li data-ko>수학: 문제 해결, 산술 기초, 방정식 풀이</li>
+                <li data-en>Science: concept explanation, experiment understanding, STEM basics</li>
+                <li data-ko>과학: 개념 설명, 실험 이해, STEM 기초</li>
+                <li data-en>Homework support: assignment clarification, subject-specific guidance</li>
+                <li data-ko>숙제 지원: 과제 명확화, 과목별 안내</li>
+              </ul>
+            </li>
+            <li style="margin-top: 8px;" data-en><strong>Approach:</strong> One-on-one and small group tutoring; patient, encouraging teaching style; adapted explanations to individual learning pace</li>
+            <li style="margin-top: 8px;" data-ko><strong>방식:</strong> 1:1 및 소규모 그룹 과외; 인내심 있고 격려적인 교수 스타일; 개인 학습 속도에 맞게 설명 조정</li>
+            <li data-en><strong>Impact:</strong> Provided consistent academic support to 8–10 students over 4 months; contributed to their foundational knowledge and confidence in academics</li>
+            <li data-ko><strong>영향:</strong> 4개월간 8–10명의 학생에게 일관된 학습 지원 제공; 기초 지식 및 학업 자신감에 기여</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- CONTACT PAGE -->
+<div id="contact" class="page">
+  <section style="text-align: center;">
+    <div class="wrap">
+      <h2 data-en>Get in Touch</h2>
+      <h2 data-ko>연락하기</h2>
+
+      <p style="font-size: 1.1rem; color: var(--ink-soft); margin: 20px 0;">
+        <span data-en>Interested in process technology, quality control, or AI-driven manufacturing optimization.</span>
+        <span data-ko>공정기술, 품질관리, AI 기반 제조 최적화에 관심이 있습니다.</span>
+      </p>
+
+      <div class="contact-links">
+        <a href="mailto:drkjh1031@naver.com">📧 Email</a>
+        <a href="https://linkedin.com/in/jinha-kim-0b0233406/" target="_blank">💼 LinkedIn</a>
+        <a href="https://github.com/drkjh1031" target="_blank">💻 GitHub</a>
+      </div>
+
+      <p style="margin-top: 40px; font-size: 0.9rem; color: var(--ink-faint);">
+        <span data-en>Seoul, Republic of Korea | 2024</span>
+        <span data-ko>대한민국 서울 | 2024</span>
+      </p>
+    </div>
+  </section>
+</div>
 
 <script>
-(function(){
-  var en=document.getElementById('btn-en'), ko=document.getElementById('btn-ko');
-  function set(lang){
-    var isKo = lang==='ko';
-    document.body.classList.toggle('ko',isKo);
-    document.documentElement.lang = isKo?'ko':'en';
-    en.setAttribute('aria-pressed',String(!isKo));
-    ko.setAttribute('aria-pressed',String(isKo));
+(function() {
+  const enBtn = document.getElementById('en-btn');
+  const koBtn = document.getElementById('ko-btn');
+  const deBtn = document.getElementById('de-btn');
+  const navBtns = document.querySelectorAll('.nav-btn');
+  const pages = document.querySelectorAll('.page');
+
+  function setLang(lang) {
+    document.body.className = lang;
+    enBtn.setAttribute('aria-pressed', lang === 'en');
+    koBtn.setAttribute('aria-pressed', lang === 'ko');
+    deBtn.setAttribute('aria-pressed', lang === 'de');
   }
-  en.addEventListener('click',function(){set('en')});
-  ko.addEventListener('click',function(){set('ko')});
-  if((navigator.language||'').toLowerCase().indexOf('ko')===0) set('ko');
+
+  function showPage(pageId) {
+    pages.forEach(p => p.classList.remove('active'));
+    document.getElementById(pageId).classList.add('active');
+    navBtns.forEach(b => b.classList.toggle('active', b.dataset.page === pageId));
+    window.scrollTo(0, 0);
+  }
+
+  enBtn.addEventListener('click', () => setLang('en'));
+  koBtn.addEventListener('click', () => setLang('ko'));
+  deBtn.addEventListener('click', () => setLang('de'));
+
+  navBtns.forEach(btn => {
+    btn.addEventListener('click', () => showPage(btn.dataset.page));
+  });
+
+  if (navigator.language?.startsWith('ko')) setLang('ko');
+  else if (navigator.language?.startsWith('de')) setLang('de');
 })();
 </script>
 </body>
