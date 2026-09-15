@@ -97,10 +97,8 @@ nav .wrap {
 
 [data-en] { display: none; }
 [data-ko] { display: none; }
-[data-de] { display: none; }
 .en [data-en] { display: revert; }
 .ko [data-ko] { display: revert; }
-.de [data-de] { display: revert; }
 
 /* TYPOGRAPHY */
 h1 { font-family: 'Archivo'; font-size: 2.8rem; font-weight: 800; line-height: 1.1; letter-spacing: -1px; margin: 16px 0; }
@@ -205,54 +203,6 @@ ul { margin: 16px 0; padding-left: 20px; }
 li { margin: 8px 0; color: var(--ink-soft); }
 li strong { color: var(--ink); }
 
-/* CHART */
-.chart {
-  background: white;
-  border: 1px solid var(--grid);
-  border-radius: 6px;
-  padding: 24px;
-  margin: 24px 0;
-}
-.bar-row {
-  display: flex;
-  gap: 12px;
-  align-items: center;
-  margin: 16px 0;
-}
-.bar-label { min-width: 100px; font-size: 0.9rem; }
-.bar {
-  height: 24px;
-  background: var(--blue);
-  border-radius: 3px;
-  display: flex;
-  align-items: center;
-  padding: 0 8px;
-  color: white;
-  font-weight: 600;
-  font-size: 0.85rem;
-}
-
-/* PUBLICATION */
-.publication {
-  background: white;
-  border-left: 3px solid var(--blue);
-  padding: 16px;
-  margin: 16px 0;
-  border-radius: 3px;
-}
-.publication-title { font-weight: 600; margin-bottom: 6px; }
-.publication-journal {
-  font-family: 'IBM Plex Mono';
-  font-size: 12px;
-  color: var(--blue);
-  margin-bottom: 8px;
-}
-.publication-authors {
-  font-family: 'IBM Plex Mono';
-  font-size: 12px;
-  color: var(--ink-faint);
-}
-
 /* CONTACT */
 .contact-links {
   display: flex;
@@ -279,13 +229,12 @@ li strong { color: var(--ink); }
 }
 </style>
 </head>
-<body class="en">
+<body class="ko">
 
 <nav>
   <div class="wrap">
     <div class="nav-brand" data-en>JINHA KIM</div>
     <div class="nav-brand" data-ko>김진하</div>
-    <div class="nav-brand" data-de>JINHA KIM</div>
     <div class="nav-menu">
       <button class="nav-btn active" data-page="home" data-en>Home</button>
       <button class="nav-btn" data-page="projects" data-en>Projects</button>
@@ -296,16 +245,10 @@ li strong { color: var(--ink); }
       <button class="nav-btn" data-page="projects" data-ko>프로젝트</button>
       <button class="nav-btn" data-page="experience" data-ko>경력</button>
       <button class="nav-btn" data-page="contact" data-ko>연락</button>
-
-      <button class="nav-btn active" data-page="home" data-de>Start</button>
-      <button class="nav-btn" data-page="projects" data-de>Projekte</button>
-      <button class="nav-btn" data-page="experience" data-de>Erfahrung</button>
-      <button class="nav-btn" data-page="contact" data-de>Kontakt</button>
     </div>
     <div class="lang-toggle">
-      <button id="en-btn" aria-pressed="true">EN</button>
-      <button id="ko-btn" aria-pressed="false">KO</button>
-      <button id="de-btn" aria-pressed="false">DE</button>
+      <button id="en-btn" aria-pressed="false">EN</button>
+      <button id="ko-btn" aria-pressed="true">KO</button>
     </div>
   </div>
 </nav>
@@ -316,11 +259,9 @@ li strong { color: var(--ink); }
     <div class="wrap">
       <span class="eyebrow" data-en>Mechanical Engineer · Seoul, Korea</span>
       <span class="eyebrow" data-ko>기계공학자 · 대한민국 서울</span>
-      <span class="eyebrow" data-de>Maschinenbauingenieurin · Seoul, Südkorea</span>
       
       <h1 data-en>Measure, analyze,<br>optimize.</h1>
       <h1 data-ko>측정하고, 분석하고,<br>개선합니다.</h1>
-      <h1 data-de>Messen, analysieren,<br>optimieren.</h1>
 
       <p class="hero-intro" data-en>
         Mechanical engineering graduate specializing in precision machining, AI-driven control systems, and process optimization. 
@@ -329,10 +270,6 @@ li strong { color: var(--ink); }
       <p class="hero-intro" data-ko>
         정밀 가공, AI 기반 제어 시스템, 프로세스 최적화를 전문으로 하는 기계공학 졸업자.
         SCI 논문 2편 발표, 미세방전가공 자동화 혁신으로 수상.
-      </p>
-      <p class="hero-intro" data-de>
-        Maschinenbauabsolventin mit Spezialisierung auf Präzisionsfertigung, KI-gesteuerte Steuerungssysteme und Prozessoptimierung.
-        Veröffentlichte Forscherin mit 2 SCI-Papieren und preisgekrönter Innovation in der Mikro-Funkenerosionsautomatisierung.
       </p>
 
       <div class="hero-stats">
@@ -364,7 +301,6 @@ li strong { color: var(--ink); }
     <div class="wrap">
       <h2 data-en>Core Skills</h2>
       <h2 data-ko>핵심 역량</h2>
-      <h2 data-de>Kernkompetenzen</h2>
 
       <div class="card-grid">
         <div class="card">
@@ -470,8 +406,8 @@ li strong { color: var(--ink); }
           <ul>
             <li><strong data-en>Korean</strong><strong data-ko>한국어</strong> — native</li>
             <li><strong data-en>English</strong><strong data-ko>영어</strong> — TOEIC Speaking IM3 (2026)</li>
-            <li><strong data-en>German</strong><strong data-ko>독일어</strong> — conversational</li>
-            <li><strong data-en>German Sign Language</strong><strong data-ko>독일 수어</strong> — basic</li>
+            <li><strong data-en>German</strong><strong data-ko>독일어</strong> — 회화 가능</li>
+            <li><strong data-en>German sign Language(DGS)</strong><strong data-ko>독일 수어(DGS)</strong> — 기초</li>
           </ul>
         </div>
         <div class="card">
@@ -505,11 +441,13 @@ li strong { color: var(--ink); }
           <th data-en>Tools</th><td><strong>Python, PyTorch, MATLAB, LabVIEW, NumPy, Pandas</strong></td>
         </tr>
         <tr>
-          <th data-en>Goal</th><td data-en>Replace fixed voltage thresholds with intelligent signal classification to reduce machining time and prevent tool breakage</td>
+          <th data-en>Goal</th>
+          <td data-en>Replace fixed voltage thresholds with intelligent signal classification to reduce machining time and prevent tool breakage</td>
           <td data-ko>고정 전압 임계값을 지능형 신호 분류로 대체하여 가공 시간 단축 및 공구 파손 방지</td>
         </tr>
         <tr>
-          <th data-en>My Role</th><td data-en>Signal analysis (MATLAB PCA), ML model development (Python: CNN-TCN, Bi-LSTM, QCL), LabVIEW real-time control integration</td>
+          <th data-en>My Role</th>
+          <td data-en>Signal analysis (MATLAB PCA), ML model development (Python: CNN-TCN, Bi-LSTM, QCL), LabVIEW real-time control integration</td>
           <td data-ko>신호 분석 (MATLAB PCA), ML 모델 개발 (Python: CNN-TCN, Bi-LSTM, QCL), LabVIEW 실시간 제어 통합</td>
         </tr>
         <tr>
@@ -535,11 +473,13 @@ li strong { color: var(--ink); }
           <th data-en>Tools</th><td><strong>Autodesk Inventor, CAD modeling</strong></td>
         </tr>
         <tr>
-          <th data-en>Goal</th><td data-en>Design flexible fuel cells for wearable electronics by maintaining power output under repeated folding</td>
+          <th data-en>Goal</th>
+          <td data-en>Design flexible fuel cells for wearable electronics by maintaining power output under repeated folding</td>
           <td data-ko>반복 접힘에서도 성능을 유지하는 웨어러블용 유연 연료전지 설계</td>
         </tr>
         <tr>
-          <th data-en>My Role</th><td data-en>Housing and flow channel design (Inventor), mechanical tolerance validation, electrical performance testing</td>
+          <th data-en>My Role</th>
+          <td data-en>Housing and flow channel design (Inventor), mechanical tolerance validation, electrical performance testing</td>
           <td data-ko>케이싱 및 유로 설계 (Inventor), 기계적 변형 허용도 검증, 전기 성능 테스트</td>
         </tr>
         <tr>
@@ -564,11 +504,13 @@ li strong { color: var(--ink); }
           <th data-en>Tools</th><td><strong>Unity, C#, Google Sheets API, Microsoft Office</strong></td>
         </tr>
         <tr>
-          <th data-en>Goal</th><td data-en>Reduce iteration friction by moving game data from code to shared spreadsheets, enabling designers to work independently</td>
+          <th data-en>Goal</th>
+          <td data-en>Reduce iteration friction by moving game data from code to shared spreadsheets, enabling designers to work independently</td>
           <td data-ko>게임 데이터를 코드에서 공유 스프레드시트로 이동하여 기획자의 독립적 작업 가능하게 함</td>
         </tr>
         <tr>
-          <th data-en>My Role</th><td data-en>Data architecture redesign, C# serialization layer implementation, Google Sheets API integration, game UI & auxiliary features (Unity)</td>
+          <th data-en>My Role</th>
+          <td data-en>Data architecture redesign, C# serialization layer implementation, Google Sheets API integration, game UI & auxiliary features (Unity)</td>
           <td data-ko>데이터 아키텍처 재설계, C# 시리얼화 계층 구현, Google Sheets API 통합, 게임 UI 및 보조 기능 (Unity)</td>
         </tr>
         <tr>
@@ -579,7 +521,8 @@ li strong { color: var(--ink); }
           </td>
         </tr>
         <tr>
-          <th data-en>Team</th><td data-en>BRIDGE (Inter-University Game Development Club), 9th cohort programmer | Team: "JuJak Games"</td>
+          <th data-en>Team</th>
+          <td data-en>BRIDGE (Inter-University Game Development Club), 9th cohort programmer | Team: "JuJak Games"</td>
           <td data-ko>대학생 연합 게임 제작 동아리 BRIDGE, 9기 프로그래머 | 팀: "주작 게임즈"</td>
         </tr>
       </table>
@@ -595,11 +538,13 @@ li strong { color: var(--ink); }
           <th data-en>Tools</th><td><strong>Autodesk Inventor, FEA/Modal Analysis, CAD design</strong></td>
         </tr>
         <tr>
-          <th data-en>Goal</th><td data-en>Design spindle fixture system with reduced resonance frequencies and eliminated rigid body modes for precision machining</td>
+          <th data-en>Goal</th>
+          <td data-en>Design spindle fixture system with reduced resonance frequencies and eliminated rigid body modes for precision machining</td>
           <td data-ko>공진 주파수 감소 및 강체모드 제거로 정밀 가공용 스핀들 클램프 설계</td>
         </tr>
         <tr>
-          <th data-en>My Role</th><td data-en>CAD design (Inventor 3D assembly: spindle, clamp, supports, rollers), FEA modal analysis, soft spring optimization, stress validation</td>
+          <th data-en>My Role</th>
+          <td data-en>CAD design (Inventor 3D assembly: spindle, clamp, supports, rollers), FEA modal analysis, soft spring optimization, stress validation</td>
           <td data-ko>CAD 설계 (Inventor 3D 어셈블리: 스핀들, 클램프, 지지대, 롤러), FEA 모달해석, 소프트 스프링 최적화, 응력 검증</td>
         </tr>
         <tr>
@@ -610,7 +555,8 @@ li strong { color: var(--ink); }
           </td>
         </tr>
         <tr>
-          <th data-en>Deliverables</th><td data-en>3D assembly (Inventor .iam), stress analysis report (HTML), soft spring STEP model, 3D animation</td>
+          <th data-en>Deliverables</th>
+          <td data-en>3D assembly (Inventor .iam), stress analysis report (HTML), soft spring STEP model, 3D animation</td>
           <td data-ko>3D 조립 모델 (Inventor .iam), 응력 해석 보고서 (HTML), 소프트 스프링 모델, 3D 애니메이션</td>
         </tr>
       </table>
@@ -734,7 +680,7 @@ li strong { color: var(--ink); }
           <h3 style="margin-top: 0;" data-ko>교육 봉사</h3>
           <div style="font-size: 0.9rem; color: var(--ink-faint); margin-bottom: 12px;">2025.06 – 2025.09 | 20 hours total</div>
           <ul style="font-size: 0.9rem;">
-            <li data-en><strong>Organization:</strong> Gwanakjump Social Cooperative — "Kkumdungshi" Community Children's Center (관악점프사회적협동조합 꿈둥지 지역아동센터)</li>
+            <li data-en><strong>Organization:</strong> Gwanakjump Social Cooperative — "Kkumdungshi" Community Children's Center</li>
             <li data-ko><strong>기관:</strong> 관악점프사회적협동조합 꿈둥지 지역아동센터</li>
             <li data-en><strong>Target Population:</strong> Elementary and middle school students from low-income families; after-school support and mentoring</li>
             <li data-ko><strong>대상:</strong> 저소득 가정 초·중학생; 방과 후 지원 및 멘토링</li>
@@ -778,8 +724,8 @@ li strong { color: var(--ink); }
       </div>
 
       <p style="margin-top: 40px; font-size: 0.9rem; color: var(--ink-faint);">
-        <span data-en>Seoul, Republic of Korea | 2024</span>
-        <span data-ko>대한민국 서울 | 2024</span>
+        <span data-en>Seoul, Republic of Korea | 2026</span>
+        <span data-ko>대한민국 서울 | 2026</span>
       </p>
     </div>
   </section>
@@ -789,7 +735,6 @@ li strong { color: var(--ink); }
 (function() {
   const enBtn = document.getElementById('en-btn');
   const koBtn = document.getElementById('ko-btn');
-  const deBtn = document.getElementById('de-btn');
   const navBtns = document.querySelectorAll('.nav-btn');
   const pages = document.querySelectorAll('.page');
 
@@ -797,7 +742,6 @@ li strong { color: var(--ink); }
     document.body.className = lang;
     enBtn.setAttribute('aria-pressed', lang === 'en');
     koBtn.setAttribute('aria-pressed', lang === 'ko');
-    deBtn.setAttribute('aria-pressed', lang === 'de');
   }
 
   function showPage(pageId) {
@@ -809,14 +753,12 @@ li strong { color: var(--ink); }
 
   enBtn.addEventListener('click', () => setLang('en'));
   koBtn.addEventListener('click', () => setLang('ko'));
-  deBtn.addEventListener('click', () => setLang('de'));
 
   navBtns.forEach(btn => {
     btn.addEventListener('click', () => showPage(btn.dataset.page));
   });
 
   if (navigator.language?.startsWith('ko')) setLang('ko');
-  else if (navigator.language?.startsWith('de')) setLang('de');
 })();
 </script>
 </body>
